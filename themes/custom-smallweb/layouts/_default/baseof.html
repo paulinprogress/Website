@@ -13,15 +13,9 @@
 <body>
 
   <main class="page">
-    <div class="column-left">
-      {{ block "main" . }}
-        {{ .Content }}
-      {{ end }}
-    </div>
-
-    <div class="column-right">
-      
-    </div>
+    {{ block "main" . }}
+      {{ .Content }}
+    {{ end }}
   </main>
 
 
