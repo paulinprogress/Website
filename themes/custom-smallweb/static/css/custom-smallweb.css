@@ -52,26 +52,44 @@ main {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  margin: var(--margin-top) 6rem 2lh 6rem;
+  margin: var(--margin-sides);
+  margin-top: 1.5rem;
+  margin-bottom: 3rem;
 }
 .portfolio-header-left {
-  width: 31%;
+  flex: 1;
+  height: fit-content;
+}
+.portfolio-header-middle {
+  flex: 2;
   height: fit-content;
 }
 .portfolio-header-right {
-  width: 15%;
+  flex: 3;
   height: fit-content;
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: flex-end;
+}
+.portfolio-header-right > a {
+  margin-left: 2rem;
 }
 
 .portfolio {
   width: auto;
-  max-width: calc(100% - 12rem);
-  margin-left: 6rem;
-  margin-right: 6rem;
-  margin-bottom: 6rem;
+  max-width: calc(100% - var(--margin-sides)*2);
+  margin-left: var(--margin-sides);
+  margin-right: var(--margin-sides);
+  margin-bottom: 3rem;
+}
+
+footer {
+  margin-left: var(--margin-sides);
+  margin-right: var(--margin-sides);
+  margin-bottom: 1.5rem;
+}
+footer > a {
+  margin-right: 2rem;
 }
 
 .portfolio-grid-big,
