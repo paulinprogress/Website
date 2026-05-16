@@ -78,9 +78,9 @@ a:hover {
 a.wikilink-missing {
   text-decoration: underline dotted 1px;
 }
-a.external::after {
+/*a.external::after {
   content: " ↗";
-}
+}*/
 
 footer {
   border-top: 1px solid color-mix(in srgb, var(--dividers) 20%, transparent);
