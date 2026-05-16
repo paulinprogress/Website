@@ -46,7 +46,56 @@ main {
   flex-direction: column;
 }
 
-/* ------------------------------------------------------------------------------------------------------------------------------------ */
+/* GENERAL ---------------------------------------------------------------------------------------------------------------------------- */
+
+section {
+  width: 100%;
+}
+
+h1 {
+  font-size: var(--font-size);
+  text-align: center;
+  margin-top: 1lh;
+  margin-bottom: 1lh;
+}
+
+p {
+  margin-bottom: 1lh;
+}
+p:last-of-type {
+  margin-bottom: 0;
+}
+
+/* Links */
+a {
+  color: var(--link);
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+}
+a:hover {
+  color: var(--link-hover);
+}
+a.wikilink-missing {
+  text-decoration: underline dotted 1px;
+}
+a.external::after {
+  content: " ↗";
+}
+
+footer {
+  border-top: 1px solid color-mix(in srgb, var(--dividers) 20%, transparent);
+  padding-top: 1lh;
+  margin-bottom: 1lh;
+  margin-left: var(--margin-sides);
+  margin-right: var(--margin-sides);
+  text-align: right;
+  color: rgb(114, 114, 114);
+}
+footer > a {
+  color: rgb(87, 113, 184);
+}
+
+/* SPECIFIC --------------------------------------------------------------------------------------------------------------------------- */
 
 .portfolio-header {
   display: flex;
@@ -80,16 +129,7 @@ main {
   max-width: calc(100% - var(--margin-sides)*2);
   margin-left: var(--margin-sides);
   margin-right: var(--margin-sides);
-  margin-bottom: 3rem;
-}
-
-footer {
-  margin-left: var(--margin-sides);
-  margin-right: var(--margin-sides);
-  margin-bottom: 1.5rem;
-}
-footer > a {
-  margin-right: 2rem;
+  margin-bottom: 2lh;
 }
 
 .portfolio-grid-big,
@@ -137,27 +177,9 @@ footer > a {
   object-position: center; /* Center the image */
 }
 
-/* ------------------------------------------------------------------------------------------------------------------------------------ */
-
-section {
-  width: 100%;
+.portfolio-bottom {
+  margin-top: 2lh;
 }
-
-p {
-  margin-bottom: 1lh;
-}
-p:last-of-type {
-  margin-bottom: 0;
-}
-
-h1 {
-  font-size: var(--font-size);
-  text-align: center;
-  margin-top: 1lh;
-  margin-bottom: 1lh;
-}
-
-article {
-  padding-left: 3rem;
-  padding-right: 3rem;
+.portfolio-bottom > a {
+  margin-right: 2rem;
 }

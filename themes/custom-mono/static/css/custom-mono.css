@@ -291,31 +291,17 @@ hr {
   margin: 2lh 0;
 }
 
-/* Links
-- default: ...
-- wikilink: bright
-- external: bright
-*/
+/* Links */
 a {
   color: var(--link);
   text-decoration: underline;
   text-decoration-color: var(--link-underline);
   text-decoration-thickness: 1px;
-  /*white-space: nowrap;  Prevent line breaks in links */
 }
 a:hover {
   color: var(--link-hover);
   text-decoration-color: var(--link-hover-underline);
 }
-/*a.wikilink, a.external {
-  color: var(--link-highlight);
-  text-decoration: underline;
-  text-decoration-color: var(--link-highlight-underline);
-}
-a.wikilink:hover, a.external:hover {
-  color: var(--link-highlight-hover);
-  text-decoration-color: var(--link-highlight-underline);
-}*/
 a.wikilink-missing {
   color: var(--link-highlight-faded);
   text-decoration: underline dotted 1px;
