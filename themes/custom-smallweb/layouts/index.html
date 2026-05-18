@@ -1,14 +1,13 @@
 {{ define "main" }}
+
 <header class="portfolio-header">
 
   <div class="portfolio-header-left">
-    <a href=""><i>Home</i></a>
+    12:01:22 PM
   </div>
 
   <div class="portfolio-header-middle">
-    {{ with site.GetPage "home.md" }}
-      {{ partial "content-parsed.html" . }}
-    {{ end }}
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
   </div>
 
   <div class="portfolio-header-right">
@@ -18,67 +17,10 @@
 
 </header>
 
-<section class="portfolio">
-  {{ $pages := where site.RegularPages "Section" "portfolio" }}
+<section class="home">
 
-  <div class="portfolio-grid-big">
-  {{ $selected := slice "Internal Review" "JetQuest" }}
-  {{ $filtered := where $pages ".Params.title" "in" $selected }}
-
-  {{ range $filtered }}
-
-    {{ $image := "" }}
-    {{ if index .Params "feature-image" }}
-      {{ $image = index .Params "feature-image" }}
-    {{ else if .Params.image }}
-      {{ $image = .Params.image }}
-    {{ else }}
-      {{ $image = "/images/test/test.jpg" }}
-    {{ end }}
-
-    <div class="portfolio-item-big">
-      <a href="{{ .RelPermalink }}">
-        <div class="thumb">
-          <img src="{{ $image }}" alt="{{ .Title }}">
-        </div>
-      </a>
-    </div>
-
-  {{ end }}
-  </div>
-
-  <div class="portfolio-grid-small">
-  {{ $selected := slice "Last Block Standing" "Flat Frenzy" "Minor Illusion" }}
-  {{ $filtered := where $pages ".Params.title" "in" $selected }}
-
-  {{ range $filtered }}
-
-    {{ $image := "" }}
-    {{ if index .Params "thumb-image" }}
-      {{ $image = index .Params "thumb-image" }}
-    {{ else if .Params.image }}
-      {{ $image = .Params.image }}
-    {{ else }}
-      {{ $image = "/images/test/test.jpg" }}
-    {{ end }}
-
-    <div class="portfolio-item-small">
-      <a href="{{ .RelPermalink }}">
-        <div class="thumb">
-          <img src="{{ $image }}" alt="{{ .Title }}">
-        </div>
-      </a>
-    </div>
-
-  {{ end }}
-  </div>
-
-  <div class="portfolio-bottom">
-    <p>Check this shit out:</p><br>
-    <a href="https://www.paulhofmann.dev/">Itch.io</a>
-    <a href="https://www.paulhofmann.dev/">GitHub</a>
-    <a href="https://www.paulhofmann.dev/">YouTube</a>
-    <a href="https://www.paulhofmann.dev/">Twitter/X</a>
+  <div class="home-name">
+    Paul Hofmann
   </div>
 
 </section>
@@ -86,6 +28,5 @@
 <footer>
   <p>© 2026 Paul Hofmann, <a href="https://www.paulhofmann.dev/">GitHub</a></p>
 </footer>
-
 
 {{ end }}
