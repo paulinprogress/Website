@@ -1,32 +1,54 @@
 {{ define "main" }}
 
-<header class="portfolio-header">
+<div class="home">
 
-  <div class="portfolio-header-left">
-    12:01:22 PM
+  <div class="home-left">
+
+    <img class="home-image" src="standalone/dithered-image-1.jpeg" alt="">
+
+    <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae. Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat.</p>
+
   </div>
 
-  <div class="portfolio-header-middle">
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+  <div class="home-right">
+
+    <nav>
+      <!-- My stuff -->
+      <a href="/portfolio">Portfolio</a>
+      <p>Focused primarily on games. See more on <a>GHOSTS & GLITTER</a> page</p>
+
+      <a href="/notebook">Notebook</a>
+      <p>Quis nostrud exercitation ullamco laboris nisi ut I collect fresh finds. Excepteur sint occaecat cupidatat non proident.</p>
+
+      <a href="/gallery">Gallery</a>
+      <p>This is where I collect fresh finds.</p>
+
+      <br>
+
+      <!-- Inspiration -->
+      <a href="/canon">Canon</a>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod.</p>
+
+      <a href="/finds">Fresh finds</a>
+      <p>This is where I collect fresh finds.</p>
+
+      <br>
+      
+      <!-- Engage -->
+      <a href="/support">Support</a>
+      <p>Here you can support me so I can spend more time on meaningful stuff!.</p>
+
+      <a href="/chat">Chat</a>
+      <p>My favorite retro web feature! Live chat with anyone as bored as you.</p>
+
+      <a href="/guestbook">Guestbook</a>
+      <p>Another retro web classic.</p>
+    </nav>
+
   </div>
 
-  <div class="portfolio-header-right">
-    <a href="" target="_blank" rel="noopener noreferrer" class="external">Itch.io</a>
-    <a href="" target="_blank" rel="noopener noreferrer" class="external">GitHub</a>
-  </div>
+  {{ partial "footer.html" }}
 
-</header>
-
-<section class="home">
-
-  <div class="home-name">
-    Paul Hofmann
-  </div>
-
-</section>
-
-<footer>
-  <p>© 2026 Paul Hofmann, <a href="https://www.paulhofmann.dev/">GitHub</a></p>
-</footer>
+</div>
 
 {{ end }}
