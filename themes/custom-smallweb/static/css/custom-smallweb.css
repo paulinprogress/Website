@@ -58,6 +58,36 @@ main {
 
 /* GENERAL ---------------------------------------------------------------------------------------------------------------------------- */
 
+header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-left: var(--margin-sides);
+  margin-right: var(--margin-sides);
+  margin-top: var(--margin-top);
+  margin-bottom: 2rem;
+}
+
+footer {
+  display: none;
+  position: absolute;
+  bottom: 0;
+  width: calc(100vw - var(--margin-sides)*2);
+  /*border-top: 1px solid color-mix(in srgb, var(--dividers) 20%, transparent);*/
+  /*border-bottom: 1px solid color-mix(in srgb, var(--dividers) 20%, transparent);*/
+  padding-top: 0.5lh;
+  margin-top: 1.5lh;
+  margin-bottom: 1lh;
+  margin-left: var(--margin-sides);
+  margin-right: var(--margin-sides);
+  text-align: left;
+  vertical-align: middle;
+  color: var(--text-footer);
+}
+footer > div > a {
+  color: var(--text-footer);
+}
+
 section {
   width: 100%;
 }
@@ -98,27 +128,40 @@ hr {
   margin-bottom: 1lh;
 }
 
-footer {
-  border-top: 1px solid color-mix(in srgb, var(--dividers) 20%, transparent);
-  /*border-bottom: 1px solid color-mix(in srgb, var(--dividers) 20%, transparent);*/
-  padding-top: 0.5lh;
-  margin-top: 1.5lh;
-  margin-bottom: 1lh;
-  margin-left: var(--margin-sides);
-  margin-right: var(--margin-sides);
-  vertical-align: middle;
-  color: var(--text-footer);
-}
-footer > div > a {
-  color: var(--text-footer);
-}
-
 /* HOME PAGE -------------------------------------------------------------------------------------------------------------------------- */
 
+/* Header */
+.home-header-left {
+  flex: 2;
+  height: fit-content;
+}
+.home-header-middle {
+  flex: 2;
+  height: fit-content;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  margin-left: var(--margin-sides);
+}
+.home-header-right {
+  flex: 1;
+  height: fit-content;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+}
+.home-header-middle > a {
+  margin-right: 2rem;
+}
+.home-header-right > a {
+  margin-left: 2rem;
+}
+
+/* Main */
 .home {
   display: flex;
   flex-direction: row;
-  height: 100vh;
+  margin-top: 3rem;
 }
 .home-left {
   flex: 2;
@@ -130,19 +173,16 @@ footer > div > a {
 /* Left */
 .home-image {
   width: 280px;
-  margin-top: var(--margin-top);
   margin-left: var(--margin-sides);
 }
 .home-left > p {
   margin-left: var(--margin-sides);
   margin-right: calc(var(--margin-sides)*2);
-  margin-top: 1lh;
   text-indent: 6rem;
 }
 
 /* Right */
 .home-right > nav {
-  margin-top: calc(350px + 1.5rem + 1lh);
   margin-left: var(--margin-sides);
   margin-right: var(--margin-sides);
 }
@@ -154,27 +194,8 @@ footer > div > a {
   margin-bottom: 0;
 }
 
-/* Footer */
-.home > footer {
-  display: none;
-  position: absolute;
-  bottom: 0;
-  margin-bottom: 1rem;
-  /*border: 0;*/
-  width: calc(100vw - var(--margin-sides)*2);
-  text-align: left;
-}
-
 /* PORTFOLIO -------------------------------------------------------------------------------------------------------------------------- */
 
-.portfolio-header {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  margin: var(--margin-sides);
-  margin-top: var(--margin-top);
-  margin-bottom: 3rem;
-}
 .portfolio-header-left {
   flex: 1;
   height: fit-content;

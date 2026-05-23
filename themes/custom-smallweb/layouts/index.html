@@ -1,27 +1,41 @@
 {{ define "main" }}
 
-<div class="home">
+<header>
+  <div class="home-header-left">Paul's Home Page</div>
+
+  <div class="home-header-middle">22:07 PM</div>
+
+  <div class="home-header-right">
+    <a href="/portfolio">Portfolio</a>
+    <a href="/cv">CV</a>
+  </div>
+
+</header>
+
+<div class="home-image-row">
+  <img class="home-image" src="standalone/dithered-image-1.jpeg" alt="">
+  <img class="home-image" src="standalone/dithered-image-2.jpeg" alt="">
+  <img class="home-image" src="standalone/dithered-image-3.jpeg" alt="">
+</div>
+
+<section class="home">
 
   <div class="home-left">
-
-    <img class="home-image" src="standalone/dithered-image-1.jpeg" alt="">
-
     <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae. Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat.</p>
-
   </div>
 
   <div class="home-right">
 
     <nav>
       <!-- My stuff -->
-      <a href="/portfolio">Portfolio</a>
-      <p>Focused primarily on games. See more on <a>GHOSTS & GLITTER</a> page</p>
-
-      <a href="/notebook">Notebook</a>
-      <p>Quis nostrud exercitation ullamco laboris nisi ut I collect fresh finds. Excepteur sint occaecat cupidatat non proident.</p>
+      <a href="/posts">Posts</a>
+      <p>More complete, less curated than the alibo. Quis nostrud exercitation ullamco laboris.</p>
 
       <a href="/gallery">Gallery</a>
       <p>This is where I collect fresh finds.</p>
+
+      <a href="/notebook">Notebook</a>
+      <p>Quis nostrud exercitation ullamco laboris nisi ut I collect fresh finds. Excepteur sint occaecat cupidatat non proident.</p>
 
       <br>
 
@@ -47,8 +61,8 @@
 
   </div>
 
-  {{ partial "footer.html" }}
+</section>
 
-</div>
+{{ partial "footer.html" }}
 
 {{ end }}
