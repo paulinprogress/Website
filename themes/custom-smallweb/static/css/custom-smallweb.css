@@ -24,7 +24,7 @@
   --margin-sides: 2rem;
   --margin-bottom: 6rem;
   /* Other options */
-  --img-radius: 4px;
+  --img-radius: 0px;
 }
 
 /* ------------------------------------------------------------------------------------------------------------------------------------ */
@@ -249,7 +249,6 @@ hr {
 .thumb {
   position: relative;
   overflow: hidden;
-  border-radius: var(--img-radius);
   background-color: #f0f0f0; /* Placeholder background */
   width: 100%;
 }
