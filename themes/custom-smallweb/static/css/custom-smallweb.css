@@ -132,7 +132,7 @@ hr {
 
 /* Header */
 .home-header-left {
-  flex: 2;
+  flex: 1;
   height: fit-content;
 }
 .home-header-middle {
@@ -141,10 +141,9 @@ hr {
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
-  margin-left: var(--margin-sides);
 }
 .home-header-right {
-  flex: 1;
+  flex: 3;
   height: fit-content;
   display: flex;
   flex-direction: row;
@@ -160,52 +159,46 @@ hr {
 /* Main */
 .home {
   display: flex;
-  flex-direction: row;
-  margin-top: 3rem;
-}
-.home-left {
-  flex: 2;
-}
-.home-right {
-  flex: 3;
+  flex-direction: column;
+  position: absolute;
+  margin-top: var(--margin-top);
+  margin-left: var(--margin-sides);
+  margin-right: var(--margin-sides);
+  padding-left: calc((2/12)*100%);
+  padding-right: calc((5/12)*100%);
 }
 
-/* Left */
+.home > p {
+  text-indent: 6rem;
+}
+.home > nav {
+  margin-top: 24rem;
+}
+.home > nav > a {
+  margin-left: 0; /*var(--margin-sides);*/
+}
+.home > nav > p {
+  margin-left: var(--margin-sides);
+  margin-bottom: 0;
+}
+
 .home-image {
   width: 280px;
   margin-left: var(--margin-sides);
-}
-.home-left > p {
-  margin-left: var(--margin-sides);
-  margin-right: calc(var(--margin-sides)*2);
-  text-indent: 6rem;
-}
-
-/* Right */
-.home-right > nav {
-  margin-left: var(--margin-sides);
-  margin-right: var(--margin-sides);
-}
-.home-right > nav > a {
-  margin-left: 0; /*var(--margin-sides);*/
-}
-.home-right > nav > p {
-  margin-left: var(--margin-sides);
-  margin-bottom: 0;
 }
 
 /* PORTFOLIO -------------------------------------------------------------------------------------------------------------------------- */
 
 .portfolio-header-left {
-  flex: 1;
-  height: fit-content;
-}
-.portfolio-header-middle {
   flex: 2;
   height: fit-content;
 }
+.portfolio-header-middle {
+  flex: 5;
+  height: fit-content;
+}
 .portfolio-header-right {
-  flex: 3;
+  flex: 5;
   height: fit-content;
   display: flex;
   flex-direction: row;
