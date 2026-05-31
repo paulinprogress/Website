@@ -1,6 +1,7 @@
 {{ define "main" }}
 
-<header>
+<header class="grid-layout-biased">
+
   <div class="home-header-left">Paul's Home Page</div>
 
   <div class="home-header-middle"></div>
@@ -12,49 +13,53 @@
 
 </header>
 
-<section class="home">
+<div class="grid-layout-biased">
 
-  <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae. Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat.</p>
+  <section class="home">
 
-  <nav>
-    <!-- My stuff -->
-    <a href="/posts">Posts</a>
-    <p>More complete, less curated than the alibo. Quis nostrud exercitation ullamco laboris.</p>
+    <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae. Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat.</p>
 
-    <a href="/notebook">Notebook</a>
-    <p>Quis nostrud exercitation ullamco laboris nisi ut I collect fresh finds. Excepteur sint occaecat cupidatat non proident.</p>
+    <nav>
+      <!-- My stuff -->
+      <a href="/posts">Posts</a>
+      <p>More complete, less curated than the alibo. Quis nostrud exercitation ullamco laboris.</p>
 
-    <br>
+      <a href="/notebook">Notebook</a>
+      <p>Quis nostrud exercitation ullamco laboris nisi ut I collect fresh finds. Excepteur sint occaecat cupidatat non proident.</p>
 
-    <!-- Inspiration -->
-    <a href="/canon">Canon</a>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod.</p>
+      <br>
 
-    <a href="/finds">Fresh finds</a>
-    <p>This is where I collect fresh finds.</p>
+      <!-- Inspiration -->
+      <a href="/canon">Canon</a>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod.</p>
 
-    <br>
-    
-    <!-- Engage -->
-    <a href="/chat">Chat</a>
-    <p>My favorite retro web feature! Live chat with anyone as bored as you.</p>
+      <a href="/finds">Fresh finds</a>
+      <p>This is where I collect fresh finds.</p>
 
-    <a href="/guestbook">Guestbook</a>
-    <p>Another retro web classic.</p>
+      <br>
+      
+      <!-- Engage -->
+      <a href="/chat">Chat</a>
+      <p>My favorite retro web feature! Live chat with anyone as bored as you.</p>
 
-    <br>
+      <a href="/guestbook">Guestbook</a>
+      <p>Another retro web classic.</p>
 
-    <a href="/support">Support</a>
-    <p>Here you can support me so I can spend more time on meaningful stuff!</p>
-  </nav>
+      <br>
 
-</section>
+      <a href="/support">Support</a>
+      <p>Here you can support me so I can spend more time on meaningful stuff!</p>
+    </nav>
 
-<!--<div class="home-image-row">
-  <img class="home-image" src="standalone/dithered-image-1.jpeg" alt="">
-  <img class="home-image" src="standalone/dithered-image-2.jpeg" alt="">
-  <img class="home-image" src="standalone/dithered-image-3.jpeg" alt="">
-</div>-->
+  </section>
+
+  <!--<div class="home-image-row">
+    <img class="home-image" src="standalone/dithered-image-1.jpeg" alt="">
+    <img class="home-image" src="standalone/dithered-image-2.jpeg" alt="">
+    <img class="home-image" src="standalone/dithered-image-3.jpeg" alt="">
+  </div>-->
+
+</div>
 
 {{ partial "footer.html" }}
 

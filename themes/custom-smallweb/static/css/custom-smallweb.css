@@ -18,7 +18,7 @@
   /* Font & text options */
   --font-size: 16px;
   --line-height: normal;
-  --indentation: 6ch; /* For lists, blockquotes, etc. */
+  --indentation: 2rem; /* For lists, blockquotes, etc. */
   /* Layout options */
   --margin-top: 1.5rem;
   --margin-sides: 2rem;
@@ -54,32 +54,44 @@ main {
 .page {
   display: flex;
   flex-direction: column;
+  margin-left: var(--margin-sides);
+  margin-right: var(--margin-sides);
+  margin-top: var(--margin-top);
+  margin-bottom: var(--margin-top);
+}
+
+.grid-layout-biased {
+  display: grid;
+  grid-template-columns: 2fr 5fr 5fr;
+}
+.grid-layout-centered {
+  display: grid;
+  grid-template-columns: 2fr 5fr 2fr;
 }
 
 /* GENERAL ---------------------------------------------------------------------------------------------------------------------------- */
 
 header {
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding-top: var(--margin-top);
+  padding-left: var(--margin-sides);
+  padding-right: var(--margin-sides);
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  margin-left: var(--margin-sides);
-  margin-right: var(--margin-sides);
-  margin-top: var(--margin-top);
-  margin-bottom: 2rem;
 }
 
 footer {
-  display: none;
-  position: absolute;
-  bottom: 0;
-  width: calc(100vw - var(--margin-sides)*2);
-  /*border-top: 1px solid color-mix(in srgb, var(--dividers) 20%, transparent);*/
+  border-top: 1px solid color-mix(in srgb, var(--dividers) 20%, transparent);
   /*border-bottom: 1px solid color-mix(in srgb, var(--dividers) 20%, transparent);*/
-  padding-top: 0.5lh;
-  margin-top: 1.5lh;
-  margin-bottom: 1lh;
-  margin-left: var(--margin-sides);
-  margin-right: var(--margin-sides);
+  padding-top: 0.5rem;
+  padding-bottom: 0.4rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
   text-align: left;
   vertical-align: middle;
   color: var(--text-footer);
@@ -132,25 +144,18 @@ hr {
 
 /* Header */
 .home-header-left {
-  flex: 1;
+  grid-column: 1;
   height: fit-content;
 }
 .home-header-middle {
-  flex: 2;
+  grid-column: 2;
   height: fit-content;
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
 }
 .home-header-right {
-  flex: 3;
-  height: fit-content;
+  grid-column: 3;
   display: flex;
-  flex-direction: row;
-  justify-content: flex-end;
-}
-.home-header-middle > a {
-  margin-right: 2rem;
+  justify-content: right;
+  height: fit-content;
 }
 .home-header-right > a {
   margin-left: 2rem;
@@ -158,47 +163,43 @@ hr {
 
 /* Main */
 .home {
-  display: flex;
-  flex-direction: column;
-  position: absolute;
-  margin-top: var(--margin-top);
-  margin-left: var(--margin-sides);
-  margin-right: var(--margin-sides);
-  padding-left: calc((2/12)*100%);
-  padding-right: calc((5/12)*100%);
+  grid-column: 2;
+  margin-bottom: 6rem;
 }
-
 .home > p {
-  text-indent: 6rem;
+  text-indent: var(--indentation);
 }
 .home > nav {
-  margin-top: 24rem;
+  margin-top: 55rem;
 }
 .home > nav > a {
-  margin-left: 0; /*var(--margin-sides);*/
+  margin-left: 0; /*var(--indentation);*/
 }
 .home > nav > p {
-  margin-left: var(--margin-sides);
+  margin-left: var(--indentation);
   margin-bottom: 0;
 }
 
 .home-image {
   width: 280px;
-  margin-left: var(--margin-sides);
+  margin-right: var(--indentation);
 }
 
 /* PORTFOLIO -------------------------------------------------------------------------------------------------------------------------- */
 
 .portfolio-header-left {
-  flex: 2;
+  grid-column: 1;
   height: fit-content;
 }
 .portfolio-header-middle {
-  flex: 5;
+  grid-column: 2;
   height: fit-content;
 }
+/*.portfolio-header-middle > p {
+  text-indent: var(--indentation);
+}*/
 .portfolio-header-right {
-  flex: 5;
+  grid-column: 3;
   height: fit-content;
   display: flex;
   flex-direction: row;
@@ -209,10 +210,8 @@ hr {
 }
 
 .portfolio {
-  width: auto;
-  max-width: calc(100% - var(--margin-sides)*2);
-  margin-left: var(--margin-sides);
-  margin-right: var(--margin-sides);
+  max-width: 100%;
+  margin-top: calc(5lh + 2rem);
   margin-bottom: 2lh;
 }
 
@@ -223,7 +222,6 @@ hr {
   max-width: 100%;
   min-width: 0;
 }
-
 .portfolio-grid-big {
   grid-template-columns: repeat(2, minmax(0, 1fr));
   margin-bottom: 2rem;
@@ -232,7 +230,6 @@ hr {
   grid-template-columns: repeat(3, minmax(0, 1fr));
   margin-top: 2rem;
 }
-
 .portfolio-item-big,
 .portfolio-item-small {
   width: 100%;
