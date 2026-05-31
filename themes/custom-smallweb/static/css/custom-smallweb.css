@@ -21,8 +21,8 @@
   --indentation: 2rem; /* For lists, blockquotes, etc. */
   /* Layout options */
   --margin-top: 1.5rem;
+  --margin-bottom: 1rem;
   --margin-sides: 2rem;
-  --margin-bottom: 6rem;
   /* Other options */
   --img-radius: 0px;
 }
@@ -35,7 +35,7 @@
   padding: 0;
 }
 html, body {
-  min-height: calc(100vh - var(--margin-top)*2);
+  min-height: calc(100vh - var(--margin-top) - var(--margin-bottom));
   display: flex;
   flex-direction: column;
   scrollbar-gutter: stable; /* Prevents layout shift when scrollbar appears */
@@ -50,7 +50,7 @@ body {
   margin-left: var(--margin-sides);
   margin-right: var(--margin-sides);
   margin-top: var(--margin-top);
-  margin-bottom: var(--margin-top);
+  margin-bottom: var(--margin-bottom);
 }
 
 main {
