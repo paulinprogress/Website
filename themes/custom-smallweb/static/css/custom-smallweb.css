@@ -85,6 +85,27 @@ header {
   flex-direction: row;
   justify-content: space-between;
 }
+.header-left {
+  grid-column: 1;
+  height: fit-content;
+}
+.header-middle {
+  grid-column: 2;
+  height: fit-content;
+}
+.header-middle > p {
+  text-indent: var(--indentation);
+}
+.header-right {
+  grid-column: 3;
+  height: fit-content;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+}
+.header-right > a {
+  margin-left: 2rem;
+}
 
 footer {
   border-top: 1px solid color-mix(in srgb, var(--dividers) 20%, transparent);
@@ -159,26 +180,6 @@ hr {
 
 /* HOME PAGE -------------------------------------------------------------------------------------------------------------------------- */
 
-/* Header */
-.home-header-left {
-  grid-column: 1;
-  height: fit-content;
-}
-.home-header-middle {
-  grid-column: 2;
-  height: fit-content;
-}
-.home-header-right {
-  grid-column: 3;
-  display: flex;
-  justify-content: right;
-  height: fit-content;
-}
-.home-header-right > a {
-  margin-left: 2rem;
-}
-
-/* Main */
 .home {
   grid-column: 2;
   margin-bottom: 6rem;
@@ -204,30 +205,6 @@ hr {
 
 /* PORTFOLIO MAIN --------------------------------------------------------------------------------------------------------------------- */
 
-/* Header */
-.portfolio-header-left {
-  grid-column: 1;
-  height: fit-content;
-}
-.portfolio-header-middle {
-  grid-column: 2;
-  height: fit-content;
-}
-.portfolio-header-middle > p {
-  text-indent: var(--indentation);
-}
-.portfolio-header-right {
-  grid-column: 3;
-  height: fit-content;
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-end;
-}
-.portfolio-header-right > a {
-  margin-left: 2rem;
-}
-
-/* (Main) */
 .portfolio {
   max-width: 100%;
   margin-top: calc(7lh + 2rem);
