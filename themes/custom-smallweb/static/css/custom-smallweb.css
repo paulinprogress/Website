@@ -35,7 +35,7 @@
   padding: 0;
 }
 html, body {
-  height: 100%;
+  min-height: calc(100vh - var(--margin-top)*2);
   display: flex;
   flex-direction: column;
   scrollbar-gutter: stable; /* Prevents layout shift when scrollbar appears */
@@ -46,6 +46,11 @@ body {
   font-size: var(--font-size);
   color: var(--text-on-bright);
   line-height: var(--line-height);
+  
+  margin-left: var(--margin-sides);
+  margin-right: var(--margin-sides);
+  margin-top: var(--margin-top);
+  margin-bottom: var(--margin-top);
 }
 
 main {
@@ -54,10 +59,6 @@ main {
 .page {
   display: flex;
   flex-direction: column;
-  margin-left: var(--margin-sides);
-  margin-right: var(--margin-sides);
-  margin-top: var(--margin-top);
-  margin-bottom: var(--margin-top);
 }
 
 .grid-layout-biased {
@@ -66,7 +67,7 @@ main {
 }
 .grid-layout-centered {
   display: grid;
-  grid-template-columns: 2fr 5fr 2fr;
+  grid-template-columns: 3fr 4fr 3fr;
 }
 
 /* GENERAL ---------------------------------------------------------------------------------------------------------------------------- */
@@ -89,9 +90,7 @@ footer {
   border-top: 1px solid color-mix(in srgb, var(--dividers) 20%, transparent);
   /*border-bottom: 1px solid color-mix(in srgb, var(--dividers) 20%, transparent);*/
   padding-top: 0.5rem;
-  padding-bottom: 0.4rem;
   margin-top: 1rem;
-  margin-bottom: 1rem;
   vertical-align: middle;
   color: var(--text-footer);
   display: flex;
@@ -107,16 +106,32 @@ section {
 }
 
 h1 {
-  font-size: var(--font-size);
-  text-align: center;
+  text-align: left;
+  font-size: 1.75em;
+  line-height: var(--font-size);
   margin-top: 1lh;
-  margin-bottom: 1lh;
+  margin-bottom: 2lh;
 }
 
 p {
   margin-bottom: 1lh;
 }
 p:last-of-type {
+  margin-bottom: 0;
+}
+
+/* Lists */
+ul, ol {
+  list-style-position: outside;  /* Bullet/number outside, text aligns with grid */
+  padding-left: var(--indentation);  /* Indent by multiple of character widths */
+  margin-bottom: 1lh;
+}
+li {
+  text-indent: 0; /* No extra indent on wrapped lines */
+  margin-bottom: 0.5lh; /* Space between list items */
+}
+li ul, li ol { /* Nested lists */
+  margin-top: 0;
   margin-bottom: 0;
 }
 
@@ -187,8 +202,9 @@ hr {
   margin-right: var(--indentation);
 }
 
-/* PORTFOLIO -------------------------------------------------------------------------------------------------------------------------- */
+/* PORTFOLIO MAIN --------------------------------------------------------------------------------------------------------------------- */
 
+/* Header */
 .portfolio-header-left {
   grid-column: 1;
   height: fit-content;
@@ -211,12 +227,13 @@ hr {
   margin-left: 2rem;
 }
 
+/* (Main) */
 .portfolio {
   max-width: 100%;
-  margin-top: calc(14lh + 2rem);
-  margin-bottom: 2lh;
+  margin-top: calc(7lh + 2rem);
 }
 
+/* Grid */
 .portfolio-grid-big,
 .portfolio-grid-small {
   display: grid;
@@ -259,22 +276,37 @@ hr {
   object-position: center; /* Center the image */
 }
 
-/*
-.portfolio-bottom {
+/* Bottom/links */
+.portfolio-links {
   display: flex;
   flex-direction: row;
   margin-top: 2lh;
+  margin-bottom: 1lh;
 }
-.portfolio-bottom-left {
-  flex: 1;
+.portfolio-links > a {
+  margin-right: 2rem;
 }
-.portfolio-bottom-middle {
-  flex: 2;
+
+/* SINGLE ----------------------------------------------------------------------------------------------------------------------------- */
+
+.single-narrow {
+  grid-column: 2;
+  padding-left: 4rem;
+  padding-right: 4rem;
 }
-.portfolio-bottom-right {
-  flex: 3;
+.single-narrow > p > img, video {
+  width: 100%;
 }
-.portfolio-bottom-middle > p:first-of-type {
-  text-indent: 40px;
+
+.backlinks {
+  grid-column: 2;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  padding-left: 0;
+  padding-right: 0;
 }
-*/
+.backlinks > h2 {
+  font-size: var(--font-size);
+  font-weight: normal;
+  margin-bottom: 0.5rem;
+}
