@@ -13,18 +13,10 @@
 
 </header>
 
-<div class="grid-layout-centered">
-
-  <article class="single-narrow">
-
+<article class="standalone">
     {{ if .Content }}
         {{ partial "content-parsed.html" . }}
     {{ end }}
-
-  </article>
-
-  {{ partial "backlinks.html" . }}
-
-</div>
+</article>
 
 {{ end }}
