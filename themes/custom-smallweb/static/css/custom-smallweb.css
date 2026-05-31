@@ -92,9 +92,11 @@ footer {
   padding-bottom: 0.4rem;
   margin-top: 1rem;
   margin-bottom: 1rem;
-  text-align: left;
   vertical-align: middle;
   color: var(--text-footer);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 }
 footer > div > a {
   color: var(--text-footer);
@@ -195,9 +197,9 @@ hr {
   grid-column: 2;
   height: fit-content;
 }
-/*.portfolio-header-middle > p {
+.portfolio-header-middle > p {
   text-indent: var(--indentation);
-}*/
+}
 .portfolio-header-right {
   grid-column: 3;
   height: fit-content;
@@ -211,7 +213,7 @@ hr {
 
 .portfolio {
   max-width: 100%;
-  margin-top: calc(5lh + 2rem);
+  margin-top: calc(14lh + 2rem);
   margin-bottom: 2lh;
 }
 

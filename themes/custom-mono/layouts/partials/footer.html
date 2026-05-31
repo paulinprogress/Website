@@ -1,7 +1,6 @@
 {{ $date := now.Format "January 2, 2006" }}
 
 <footer>
-  <div>&copy; {{ now.Year }} Paul Hofmann, <a href="https://github.com/paulinprogress/Portfolio-Website"
-  target="_blank" rel="noopener noreferrer" class="external">GitHub</a></div>
+  <div>&copy; {{ now.Year }} Paul Hofmann, {{ partial "links/link-github-website.html" }}</div>
   <!--<div>Last updated: {{ $date }}</div>-->
 </footer>
