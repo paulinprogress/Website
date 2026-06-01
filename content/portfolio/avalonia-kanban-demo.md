@@ -6,7 +6,7 @@ anchors:
 - '[[C-Sharp|C#]]'
 - '[[Dot NET|.NET]]'
 - '[[Avalonia]]'
-closed: 2026-03-05
+closed: 2026-03-08
 description: A simple Kanban board demo project, built with .NET (C#) using the Avalonia
   UI framework
 feature-image: /attachments/(2026) Avalonia Kanban Demo (Feature).webp

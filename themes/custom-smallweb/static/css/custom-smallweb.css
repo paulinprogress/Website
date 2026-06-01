@@ -108,18 +108,19 @@ header {
 }
 
 footer {
-  border-top: 1px solid color-mix(in srgb, var(--dividers) 20%, transparent);
+  border-top: 1px solid color-mix(in srgb, var(--dividers) 30%, transparent);
   /*border-bottom: 1px solid color-mix(in srgb, var(--dividers) 20%, transparent);*/
   padding-top: 0.5rem;
   margin-top: 1rem;
   vertical-align: middle;
-  color: var(--text-footer);
+  color: var(--text-on-bright);
+  opacity: 60%;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
 }
 footer > div > a {
-  color: var(--text-footer);
+  color: var(--text-on-bright);
 }
 
 section {
@@ -128,17 +129,26 @@ section {
 
 h1 {
   text-align: left;
-  font-size: 1.75em;
-  line-height: var(--font-size);
-  margin-top: 1lh;
-  margin-bottom: 2lh;
+  font-size: 1.8em;
+  line-height: 1.1em;
+  margin-top: 0.3em;
+  margin-bottom: var(--font-size);
 }
 
 p {
   margin-bottom: 1lh;
 }
-p:last-of-type {
+p:last-child {
   margin-bottom: 0;
+}
+
+/* Blocquotes */
+blockquote {
+  padding-left: 4ch;
+  padding-right: 4ch;
+  margin-bottom: 1lh;
+  border-left: 1px solid color-mix(in srgb, var(--dividers) 25%, transparent);
+  opacity: 90%;
 }
 
 /* Lists */
@@ -147,20 +157,22 @@ ul, ol {
   padding-left: var(--indentation);  /* Indent by multiple of character widths */
   margin-bottom: 1lh;
 }
+/*
 li {
-  text-indent: 0; /* No extra indent on wrapped lines */
-  margin-bottom: 0.5lh; /* Space between list items */
+  text-indent: 0; / No extra indent on wrapped lines /
+  margin-bottom: 0.5lh; / Space between list items /
 }
-li ul, li ol { /* Nested lists */
-  margin-top: 0;
+li ul, li ol { / Nested lists /
+  margin-top: 0.5lh;
   margin-bottom: 0;
-}
+}*/
 
 /* Links */
 a {
   color: var(--link-on-bright);
   text-decoration: underline;
   text-decoration-thickness: 1px;
+  opacity: 1;
 }
 /*a:hover {
   color: var(--link-hover);
@@ -171,6 +183,7 @@ a.wikilink {
 */
 a.wikilink-missing {
   text-decoration: underline dotted 1px;
+  opacity: 0.7;
 }
 /*a.external::after {
   content: " ↗";
@@ -180,6 +193,7 @@ hr {
   height: 1px;
   margin-top: 1lh;
   margin-bottom: 1lh;
+  opacity: 60%;
 }
 
 /* CUSTOM ELEMENTS -------------------------------------------------------------------------------------------------------------------- */
