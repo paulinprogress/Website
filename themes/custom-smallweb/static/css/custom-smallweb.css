@@ -131,8 +131,8 @@ h1 {
   text-align: left;
   font-size: 1.8em;
   line-height: 1.1em;
-  margin-top: 0.3em;
-  margin-bottom: var(--font-size);
+  margin-top: var(--font-size);
+  margin-bottom: 0.9em;
 }
 
 p {
@@ -161,11 +161,12 @@ ul, ol {
 li {
   text-indent: 0; / No extra indent on wrapped lines /
   margin-bottom: 0.5lh; / Space between list items /
-}
-li ul, li ol { / Nested lists /
-  margin-top: 0.5lh;
-  margin-bottom: 0;
 }*/
+li ul, li ol { /* Nested lists */
+  /*margin-top: 0.5lh;
+  margin-bottom: 0;*/
+  list-style: disc;
+}
 
 /* Links */
 a {
@@ -198,6 +199,12 @@ hr {
 
 /* CUSTOM ELEMENTS -------------------------------------------------------------------------------------------------------------------- */
 
+.frontmatter {
+  display: flex;
+  flex-direction: column;
+  opacity: 90%;
+}
+
 .backlinks {
   grid-column: 2;
   margin-top: 2rem;
@@ -210,6 +217,9 @@ hr {
   font-weight: normal;
   margin-bottom: 0.5rem;
 }
+/*.backlinks > ul, ol {
+  padding-left: 0;
+}*/
 
 .feed {
   grid-column: 2;

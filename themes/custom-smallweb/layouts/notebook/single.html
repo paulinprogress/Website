@@ -1,0 +1,32 @@
+{{ define "main" }}
+
+<header class="grid-layout-centered">
+
+  <div class="header-left">
+    <a href=".."><i>Notebook</i></a>
+  </div>
+
+  <div class="header-right">
+    {{ partial "links/link-itch.html" }}
+    {{ partial "links/link-github.html" }}
+  </div>
+
+</header>
+
+<div class="grid-layout-centered">
+
+  <article class="single-narrow">
+
+    {{ partial "frontmatter.html" . }}
+
+    {{ if .Content }}
+        {{ partial "content-parsed.html" . }}
+    {{ end }}
+
+  </article>
+
+  {{ partial "backlinks.html" . }}
+
+</div>
+
+{{ end }}

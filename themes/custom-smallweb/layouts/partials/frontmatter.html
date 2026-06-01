@@ -1,7 +1,13 @@
-{{ with .Params.created }}
-  <i>Created: {{ (time .).Format "02 Jan 2006" }}</i>
-{{ end }}
-<br>
-{{ with index .Params "last-updated" }}
-  <i>Last updated: {{ (time .).Format "02 Jan 2006" }}</i>
-{{ end }}
+<div class="frontmatter">
+
+  {{ with time .Params.created }}
+    <i>Created: {{ .Format "02 Jan 2006" }}</i>
+  {{ end }}
+
+  {{ with index .Params "last updated" }}
+    {{ with time . }}
+      <i>Last updated: {{ .Format "02 Jan 2006" }}</i>
+    {{ end }}
+  {{ end }}
+
+</div>
