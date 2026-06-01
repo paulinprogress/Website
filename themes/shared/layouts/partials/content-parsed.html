@@ -1,42 +1,36 @@
 {{- $content := .Content -}}
-{{- $patternWikilink := `\[\[([^\|\]]+)(\|([^\]]+))?\]\]` -}}
-{{- $patternHighlightedLink := `==\[(.*?)\]\((.*?)\)==` -}} <!-- Highlighted Links -->
-{{- $patternHighlightedText := `==([^=\[][^=]+?)==` -}} <!-- Highlighted Text -->
-{{- $patternImage := `!\[\[(.+?\.(?:webp|jpg|jpeg|png|svg))\]\]` -}}
-{{- $patternVideo := `!\[\[(.+?\.(?:webm|mp4|gif))\]\]` -}}
-{{- $patternPDF := `!\[\[(.+?\.(?:pdf))\]\]` -}}
-
 {{- $out := $content -}}
 
 <!-- Image Wikilinks -->
-{{ range findRE $patternImage $out }}
-  {{ $match := . }}
-  {{ $file := replaceRE $patternImage "$1" $match }}
-  {{ $replacement := printf `<img src="/attachments/%s" />` $file }}
-  {{ $out = replace $out $match $replacement }}
+{{ range partial "extract-wikilinks.html" (dict
+    "content" $out
+    "type" "image") }}
+  {{ $replacement := printf `<img src="/attachments/%s" />` .file }}
+  {{ $out = replace $out .match $replacement }}
 {{ end }}
 
 <!-- Video Wikilinks -->
-{{ range findRE $patternVideo $out }}
-  {{ $match := . }}
-  {{ $file := replaceRE $patternVideo "$1" $match }}
-  {{ $replacement := printf `<video autoplay loop muted playsinline><source src="/attachments/%s" />` $file }}
-  {{ $out = replace $out $match $replacement }}
+{{ range partial "extract-wikilinks.html" (dict
+    "content" $out
+    "type" "video") }}
+  {{ $replacement := printf `<video autoplay loop muted playsinline><source src="/attachments/%s" />` .file }}
+  {{ $out = replace $out .match $replacement }}
 {{ end }}
 
 <!-- PDF Wikilinks -->
-{{ range findRE $patternPDF $out }}
-  {{ $match := . }}
-  {{ $file := replaceRE $patternPDF "$1" $match }}
-  {{ $replacement := printf `<embed src="/attachments/%s" type="application/pdf" />` $file }}
-  {{ $out = replace $out $match $replacement }}
+{{ range partial "extract-wikilinks.html" (dict
+    "content" $out
+    "type" "pdf") }}
+  {{ $replacement := printf `<embed src="/attachments/%s" type="application/pdf" />` .file }}
+  {{ $out = replace $out .match $replacement }}
 {{ end }}
 
 <!-- Regular Wikilinks -->
-{{ range findRE $patternWikilink $out }}
-  {{ $match := . }}
-  {{ $target := replaceRE $patternWikilink "$1" $match }}
-  {{ $alias := replaceRE $patternWikilink "${3}" $match }}
+{{ range partial "extract-wikilinks.html" (dict
+    "content" $out
+    "type" "wikilink") }}
+  {{ $target := .target }}
+  {{ $alias := .alias }}
   {{ $text := cond (ne $alias "") $alias $target }}
 
   {{ $normalizedTarget := lower (plainify $target) }}
@@ -49,28 +43,18 @@
 
   {{ if $page }}
     {{ $link := printf `<a href="%s" class="wikilink">%s</a>` $page.RelPermalink $text }}
-    {{ $out = replace $out $match $link }}
+    {{ $out = replace $out .match $link }}
   {{ else }}
     {{ $link := printf `<a class="wikilink-missing" href="#">%s</a>` $text }}
-    {{ $out = replace $out $match $link }}
+    {{ $out = replace $out .match $link }}
   {{ end }}
 {{ end }}
 
-<!-- Highlighted ==[Links](url)== -->
-{{ range findRE $patternHighlightedLink $out }}
+<!-- Highlighted ==Text== (or links/wikilinks/etc.) -->
+{{ range findRE `==(.+?)==` $out }}
   {{ $match := . }}
-  {{ $text := replaceRE $patternHighlightedLink "$1" $match }}
-  {{ $url  := replaceRE $patternHighlightedLink "$2" $match }}
-  {{ $replacement := printf `<mark><a href="%s">%s</a></mark>` $url $text }}
-  {{ $out = replace $out $match $replacement }}
-{{ end }}
-
-<!-- Highlighted ==Text== -->
-{{ range findRE $patternHighlightedText $out }}
-  {{ $match := . }}
-  {{ $text := replaceRE $patternHighlightedText "$1" $match }}
-  {{ $replacement := printf "<mark>%s</mark>" $text }}
-  {{ $out = replace $out $match $replacement }}
+  {{ $inner := replaceRE `^==|==$` "" $match }}
+  {{ $out = replace $out $match (printf `<mark>%s</mark>` $inner) }}
 {{ end }}
 
 <!-- Fix spaces between links and punctuation directly after -->

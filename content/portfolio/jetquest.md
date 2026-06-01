@@ -21,6 +21,8 @@ year: '2025'
 
 # JetQuest
 
+Here's a test for a [[missing wikilink]], but also maybe a [[flat-frenzy|real one?]]. And like ==highlighted text?== And what about ==[[Highlighted links]]==?
+
 This was a collaboration with [JustinGonsalves](https://justingonsalves.itch.io/) created in one week for [Jame Gam #55](https://itch.io/jam/jame-gam-55), built around the themes “Mobility” and “Gorge”.
 
 We opted for a fun, arcady flying game with a retro look, focused on risky, mobility-driven challenges set in a canyon environment. You complete challenges to earn points and unlock new spaceships. Along the way, you can collect pickups for bonus points or fuel, but you must land before running out of fuel in order to stash your points, select new challenges, or upgrade your ship.

@@ -164,7 +164,11 @@ a {
 }
 /*a:hover {
   color: var(--link-hover);
-}*/
+}
+a.wikilink {
+  color: var(--link-hover);
+}  
+*/
 a.wikilink-missing {
   text-decoration: underline dotted 1px;
 }
@@ -183,7 +187,7 @@ hr {
 .backlinks {
   grid-column: 2;
   margin-top: 2rem;
-  margin-bottom: 2rem;
+  margin-bottom: 3rem;
   padding-left: 0;
   padding-right: 0;
 }

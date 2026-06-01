@@ -1,0 +1,31 @@
+{{- $content := .content -}}
+{{- $type := default "wikilink" .type -}}
+
+{{- $patterns := dict
+  "wikilink" `\[\[([^\|\]]+)(\|([^\]]+))?\]\]`
+  "image"    `!\[\[(.+?\.(?:webp|jpg|jpeg|png|svg))\]\]`
+  "video"    `!\[\[(.+?\.(?:webm|mp4|gif))\]\]`
+  "pdf"      `!\[\[(.+?\.(?:pdf))\]\]`
+-}}
+
+{{- $pattern := index $patterns $type -}}
+{{- $results := slice -}}
+
+{{- range findRE $pattern $content }}
+  {{- $match := . -}}
+
+  {{- if eq $type "wikilink" }}
+    {{- $results = $results | append (dict
+      "match" $match
+      "target" (replaceRE $pattern "$1" $match)
+      "alias" (replaceRE $pattern "$3" $match)
+    ) -}}
+  {{- else }}
+    {{- $results = $results | append (dict
+      "match" $match
+      "file" (replaceRE $pattern "$1" $match)
+    ) -}}
+  {{- end }}
+{{- end -}}
+
+{{- return $results -}}
