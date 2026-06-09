@@ -15,6 +15,6 @@ Etwas vor anderen zu präsentieren – egal ob unfertig, roh oder experimentell 
 Vergleichbar mit: [[The talking cure]] (Fokus auf [[Kreatives Schreiben]], [[Narrative Design]])
 
 ---
-# References
 
-- Aus: [(No Boilerplate, 2024) From Coder to Creator: My Journey](https://youtu.be/7Opkmr7kAAk?si=rfQMJBZFv32wz51m)
+- ↩
+  - Aus: [(No Boilerplate, 2024) From Coder to Creator: My Journey](https://youtu.be/7Opkmr7kAAk?si=rfQMJBZFv32wz51m)

@@ -59,6 +59,7 @@ main {
 .page {
   display: flex;
   flex-direction: column;
+  margin-bottom: 3rem;
 }
 
 .grid-layout-biased {
@@ -72,6 +73,7 @@ main {
 
 /* GENERAL ---------------------------------------------------------------------------------------------------------------------------- */
 
+/* Header */
 header {
   position: absolute;
   width: 100%;
@@ -102,37 +104,41 @@ header {
   display: flex;
   flex-direction: row;
   justify-content: flex-end;
-}
-.header-right > a {
-  margin-left: 2rem;
+  gap: 1.5rem;
 }
 
+/* Footer */
 footer {
-  border-top: 1px solid color-mix(in srgb, var(--dividers) 30%, transparent);
+  /*border-top: 1px solid color-mix(in srgb, var(--dividers) 30%, transparent);*/
   /*border-bottom: 1px solid color-mix(in srgb, var(--dividers) 20%, transparent);*/
   padding-top: 0.5rem;
   margin-top: 1rem;
   vertical-align: middle;
   color: var(--text-on-bright);
-  opacity: 60%;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
 }
-footer > div > a {
+footer > div:first-of-type {
+  display: flex;
+  flex-direction: row;
+  gap: 1.5rem;
+}
+footer > div:last-of-type {
+  opacity: 60%;
+  color: var(--text-on-bright);
+}
+footer > div:last-of-type > a {
   color: var(--text-on-bright);
 }
 
-section {
-  width: 100%;
-}
-
+/* Content */
 h1 {
   text-align: left;
-  font-size: 1.8em;
-  line-height: 1.1em;
-  margin-top: var(--font-size);
-  margin-bottom: 0.9em;
+  font-size: 1.8rem;
+  line-height: 2rem;
+  margin-top: 0.8rem;
+  margin-bottom: 1.4rem;
 }
 
 p {
@@ -142,7 +148,6 @@ p:last-child {
   margin-bottom: 0;
 }
 
-/* Blocquotes */
 blockquote {
   padding-left: 4ch;
   padding-right: 4ch;
@@ -151,11 +156,13 @@ blockquote {
   opacity: 90%;
 }
 
-/* Lists */
-ul, ol {
+ul, ol { /* Lists */
   list-style-position: outside;  /* Bullet/number outside, text aligns with grid */
   padding-left: var(--indentation);  /* Indent by multiple of character widths */
   margin-bottom: 1lh;
+}
+ul:last-child, ol:last-child {
+  margin-bottom: 0;
 }
 /*
 li {
@@ -168,7 +175,6 @@ li ul, li ol { /* Nested lists */
   list-style: disc;
 }
 
-/* Links */
 a {
   color: var(--link-on-bright);
   text-decoration: underline;
@@ -190,9 +196,14 @@ a.wikilink-missing {
   content: " ↗";
 }*/
 
+/* Misc. */
+section {
+  width: 100%;
+}
+
 hr {
   height: 1px;
-  margin-top: 1lh;
+  margin-top: 2rem;
   margin-bottom: 1lh;
   opacity: 60%;
 }
@@ -205,10 +216,11 @@ hr {
   opacity: 90%;
 }
 
+/*
 .backlinks {
+  display: none;
   grid-column: 2;
-  margin-top: 2rem;
-  margin-bottom: 3rem;
+  margin-top: 2lh;
   padding-left: 0;
   padding-right: 0;
 }
@@ -217,9 +229,10 @@ hr {
   font-weight: normal;
   margin-bottom: 0.5rem;
 }
-/*.backlinks > ul, ol {
-  padding-left: 0;
-}*/
+/.backlinks > ul, ol {
+  margin-left: 0;
+}/
+*/
 
 .feed {
   grid-column: 2;
@@ -239,7 +252,7 @@ hr {
   text-indent: var(--indentation);
 }
 .home > nav {
-  margin-top: 55rem;
+  margin-top: 2lh;
 }
 .home > nav > a {
   margin-left: 0; /*var(--indentation);*/
@@ -249,9 +262,12 @@ hr {
   margin-bottom: 0;
 }
 
+.home-image-row {
+  display: flex;
+  gap: 1.5rem;
+}
 .home-image {
-  width: 280px;
-  margin-right: var(--indentation);
+  width: 180px;
 }
 
 /* PORTFOLIO -------------------------------------------------------------------------------------------------------------------------- */
@@ -319,16 +335,16 @@ hr {
 
 .list-narrow {
   grid-column: 2;
-  padding-left: 4rem;
-  padding-right: 4rem;
+  padding-left: var(--margin-sides);
+  padding-right: var(--margin-sides);
 }
 
 /* SINGLE NARROW ---------------------------------------------------------------------------------------------------------------------- */
 
 .single-narrow {
   grid-column: 2;
-  padding-left: 4rem;
-  padding-right: 4rem;
+  padding-left: var(--margin-sides);
+  padding-right: var(--margin-sides);
 }
 .single-narrow > p > img, video {
   width: 100%;

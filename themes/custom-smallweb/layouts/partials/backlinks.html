@@ -27,7 +27,7 @@
 
 {{ if gt (len $backlinks) 0 }}
   <aside class="backlinks">
-    <hr>
+    <!-- <hr> -->
     <h2>Backlinks:</h2>
     <ul>
       {{ range sort $backlinks "Params.created" "desc" }}
@@ -43,7 +43,7 @@
   </aside>
 {{ else }}
   <aside class="backlinks">
-    <hr>
-    <h2>No Backlinks</h2>
+    <!-- <hr> -->
+    <h2><i>No Backlinks</i></h2>
   </aside>
 {{ end }}

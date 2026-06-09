@@ -1,6 +1,16 @@
 {{ $date := now.Format "02 Jan 2006" }}
 
 <footer>
-  <div><i>&copy; {{ now.Year }} Paul Hofmann (Last modified: {{ $date }})</i></div>
-  <div><a href="/meta"><i>About this website</i></a></div>
+  <div>
+    <a href="/notebook">Notebook</a>
+    <a href="/gallery">Gallery</a>
+    <a href="/finds">Fresh finds</a>
+    <a href="/canon">Canon</a>
+    <a href="/guestbook">Guestbook</a>
+    <a href="/chat">Livechat</a>
+    <a href="/support">Support</a>
+  </div>
+  <div>
+    &copy; {{ now.Year }} Paul Hofmann (Last modified: {{ $date }})
+  </div>
 </footer>

@@ -19,8 +19,6 @@ In Bezug auf [[Game Development]]:
 
 ---
 
-Referenzen:
-
 - Aufgegriffen in:
 	- [[(Warren Spector, GDC 2017) Deus Ex - Classic Game Postmortem]] ([Weblink](https://www.youtube.com/watch?v=tffX3VljTtI))
 	- [[(Game Maker’s Toolkit, 2024) 10 Game Design Lessons from 10 Years of GMTK]] ([Weblink](https://www.youtube.com/watch?v=Cm2_drGLGbc))
