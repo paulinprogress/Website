@@ -1,8 +1,29 @@
+{{ $items := slice }}
+
+{{ range .Pages }}
+    {{ $created := time .Params.created }}
+    {{ $updated := time (index .Params "last updated") }}
+
+    {{ $date := $created }}
+    {{ if and $updated (gt (time $updated) $date) }}
+        {{ $date = time $updated }}
+    {{ end }}
+
+    {{ $items = $items | append (dict
+        "page" .
+        "date" $date
+    ) }}
+{{ end }}
+
 <aside class="feed">
     <hr>
-    <a href="">This is a link</a> <i>(02 Jan 2026)</i><br>
-    <a href="">And another link to a related project</a> <i>(14 Jan 2020)</i><br>
-    <a href="">Some other project that is</a> <i>(12 Jan 2002)</i><br>
-    <a href="">I don't know</a> <i>(03 Jan 2023)</i><br>
-    <a href="">This is a link</a> <i>(31 Jan 2018)</i><br>
+    <ul>
+        {{ range sort $items "date" "desc" }}
+        <li>
+            {{ $p := .page }}
+            <a href="{{ $p.RelPermalink }}">{{ $p.LinkTitle }}</a>
+            <i>({{ .date.Format "02 Jan 2006" }})</i>
+        </li>
+        {{ end }}
+    </ul>
 </aside>

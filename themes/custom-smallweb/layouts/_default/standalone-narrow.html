@@ -1,22 +1,24 @@
 {{ define "main" }}
 
-<header class="grid-layout-centered">
+<header class="grid-layout-biased">
 
   <div class="header-left">
     <a href="../.."><i>Home</i></a>
   </div>
 
   <div class="header-right">
-    {{ partial "links/link-itch.html" }}
-    {{ partial "links/link-github.html" }}
   </div>
 
 </header>
 
-<article class="standalone">
+<div class="grid-layout-biased">
+
+  <article class="standalone-narrow">
     {{ if .Content }}
         {{ partial "content-parsed.html" . }}
     {{ end }}
-</article>
+  </article>
+
+</div>
 
 {{ end }}

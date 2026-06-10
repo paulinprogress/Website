@@ -2,24 +2,23 @@
 
 <header class="grid-layout-biased">
 
-  <div class="header-left">Paul's Home Page</div>
-
-  <div class="header-middle"></div>
+  <div class="header-left">
+    <a href="../.."><i>Home</i></a>
+  </div>
 
   <div class="header-right">
-    <a href="/sitemap">All pages</a>
   </div>
 
 </header>
 
 <div class="grid-layout-biased">
 
-  <section class="home">
-
+  <section class="standalone-narrow">
     {{ if .Content }}
         {{ partial "content-parsed.html" . }}
     {{ end }}
 
+    {{ partial "sitemap.html" }}
   </section>
 
 </div>

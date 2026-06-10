@@ -11,18 +11,10 @@
 
 </header>
 
-<div class="grid-layout-centered">
-
-  <section class="list-narrow">
-
+<article class="standalone-wide">
     {{ if .Content }}
         {{ partial "content-parsed.html" . }}
     {{ end }}
-
-  </section>
-
-  {{ partial "feed.html" . }}
-
-</div>
+</article>
 
 {{ end }}
