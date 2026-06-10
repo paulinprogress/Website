@@ -59,5 +59,7 @@
 
 <!-- Fix spaces between links and punctuation directly after -->
 {{ $out = replaceRE `</a>\s+([,.;:!?)])` "</a>$1" $out }}
+<!-- Fix spaces between links and opening paranthesis directly before -->
+{{ $out = replaceRE `\(\s+<a` "(<a" $out }}
 
 {{ $out | safeHTML }}
