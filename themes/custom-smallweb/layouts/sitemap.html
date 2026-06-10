@@ -16,11 +16,9 @@
 
   <section class="home">
 
-    <div class="home-image-row">
-      <img class="home-image" src="standalone/dithered-image-1.jpeg" alt="">
-      <img class="home-image" src="standalone/dithered-image-2.jpeg" alt="">
-      <img class="home-image" src="standalone/dithered-image-3.jpeg" alt="">
-    </div>
+    {{ if .Content }}
+        {{ partial "content-parsed.html" . }}
+    {{ end }}
 
   </section>
 

@@ -91,6 +91,10 @@ header {
   grid-column: 1;
   height: fit-content;
 }
+.header-left > a::before {
+  content: "↜ ";
+  line-height: 0;
+}
 .header-middle {
   grid-column: 2;
   height: fit-content;
