@@ -123,16 +123,13 @@ footer {
   flex-direction: row;
   justify-content: space-between;
 }
-footer > div:first-of-type {
+footer > div {
   display: flex;
   flex-direction: row;
   gap: 1.5rem;
 }
-footer > div:last-of-type {
+footer > div:last-of-type > span {
   opacity: 60%;
-  color: var(--text-on-bright);
-}
-footer > div:last-of-type > a {
   color: var(--text-on-bright);
 }
 
@@ -246,6 +243,13 @@ embed {
   opacity: 35%;
 }
 
+.support-link::before {
+  content: "⋆ ⁺₊✧";
+  position: absolute;
+  margin-left: -2.4rem;
+  font-size: 14px;
+}
+
 .frontmatter {
   display: flex;
   flex-direction: column;
@@ -278,6 +282,8 @@ embed {
 }
 .feed > ul > li {
   list-style: none;
+  display: grid;
+  grid-template-columns: 1fr 4fr;
 }
 
 /* HOME ------------------------------------------------------------------------------------------------------------------------------- */
@@ -297,14 +303,16 @@ embed {
 
 /* PORTFOLIO -------------------------------------------------------------------------------------------------------------------------- */
 
-.portfolio {
-  max-width: 100%;
-  margin-top: calc(7lh + 2rem);
+/* Intro */
+.portfolio-intro {
+  grid-column: 2;
+  margin-bottom: 2rem;
 }
 
 /* Grid */
 .portfolio-grid-big,
 .portfolio-grid-small {
+  grid-column: 1;
   display: grid;
   gap: 2rem;
   max-width: 100%;

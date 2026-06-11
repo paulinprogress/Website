@@ -7,7 +7,7 @@
   </div>
 
   <div class="header-middle">
-    {{ partial "content-parsed.html" . }}
+    
   </div>
 
   <div class="header-right">
@@ -18,6 +18,13 @@
 </header>
 
 <section class="portfolio">
+  
+  <div class="grid-layout-biased">
+    <div class="portfolio-intro">
+      {{ partial "content-parsed.html" . }}
+    </div>
+  </div>
+
   {{ $pages := where site.RegularPages "Section" "portfolio" }}
 
   <div class="portfolio-grid-big">

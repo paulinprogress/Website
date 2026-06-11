@@ -21,8 +21,8 @@
         {{ range sort $items "date" "desc" }}
         <li>
             {{ $p := .page }}
+            <span>{{ .date.Format "02 Jan 2006" }}</span>
             <a href="{{ $p.RelPermalink }}">{{ $p.LinkTitle }}</a>
-            <i>({{ .date.Format "02 Jan 2006" }})</i>
         </li>
         {{ end }}
     </ul>
