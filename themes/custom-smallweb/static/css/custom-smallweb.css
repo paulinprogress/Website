@@ -286,6 +286,11 @@ embed {
   grid-template-columns: 1fr 4fr;
 }
 
+.guestbook-container {
+  margin-top: -10.2rem;
+  margin-left: -1.55rem;
+}
+
 /* HOME ------------------------------------------------------------------------------------------------------------------------------- */
 
 .home {
@@ -394,4 +399,31 @@ embed {
 
 .standalone-narrow {
   grid-column: 2;
+}
+
+/* ------------------------------------------------------------------------------------------------------------------------------------ */
+
+/* Transition layouts */
+@media (max-width: 1600px) {
+  
+}
+
+@media (max-width: 1200px) {
+  .grid-layout-centered {
+    grid-template-columns: 2fr 4fr 2fr;
+  }
+}
+@media (max-width: 1000px) {
+  .grid-layout-centered {
+    grid-template-columns: 1fr 4fr 1fr;
+  }
+}
+
+/* MAIN MOBILE LAYOUT */
+@media (max-width: 940px) {
+  
+}
+
+@media (max-width: 720px) {
+  
 }
