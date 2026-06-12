@@ -1,0 +1,26 @@
+{{ define "main" }}
+
+<header class="grid-layout-biased">
+
+  <div class="header-left">
+    <a href="../.."><i>Home</i></a>
+  </div>
+
+  <div class="header-right">
+  </div>
+
+</header>
+
+<div class="grid-layout-biased">
+
+  <section class="standalone-narrow">
+    {{ if .Content }}
+        {{ partial "content-parsed.html" . }}
+    {{ end }}
+
+    {{ partial "chat.html" }}
+  </section>
+
+</div>
+
+{{ end }}
