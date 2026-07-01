@@ -197,9 +197,13 @@ a.wikilink-missing {
   text-decoration: underline dotted 1px;
   opacity: 0.7;
 }
-/*a.external::after {
-  content: " ↗";
-}*/
+a.external::after {
+  content: "↗";
+  font-size: smaller;
+  display: inline-block;
+  transform: translateY(-2px) translateX(2px);
+  padding-right: 2px;
+}
 
 /* Misc. */
 section {
@@ -211,6 +215,15 @@ hr {
   margin-top: 2rem;
   margin-bottom: 1lh;
   opacity: 60%;
+}
+
+img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  margin: 0; /* Remove default margin */
+  object-fit: cover; /* Cover the entire area */
+  object-position: center; /* Center the image */
 }
 
 embed {
@@ -351,14 +364,6 @@ embed {
 }
 .portfolio-item-small .thumb img {
   aspect-ratio: 630 / 500;
-}
-.thumb img {
-  display: block;
-  width: 100%;
-  height: 100%;
-  margin: 0; /* Remove default margin */
-  object-fit: cover; /* Cover the entire area */
-  object-position: center; /* Center the image */
 }
 
 /* Bottom/links */

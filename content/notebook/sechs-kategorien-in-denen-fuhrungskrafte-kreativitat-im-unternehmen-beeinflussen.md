@@ -43,5 +43,4 @@ Dazu geht sie im Detail auf sechs unterschiedliche Kategorien ein:
 
 ---
 
-- ↩
-	- Aus: [[(Teresa M. Amabile, 1998) How to Kill Creativity]] ([Weblink](https://hbr.org/1998/09/how-to-kill-creativity))
+- Aus: [[(Teresa M. Amabile, 1998) How to Kill Creativity]] ([Weblink](https://hbr.org/1998/09/how-to-kill-creativity))

@@ -19,7 +19,7 @@ Imports markdown files from Obsidian notebook to Hugo-based website.
 """
 
 # Define directories
-OBSIDIAN_ROOT = Path("~/Repositories/Notebook").expanduser() # ~/Obsidian/Notebook
+OBSIDIAN_ROOT = Path("~/Obsidian/Notebook").expanduser() # ~/Obsidian/Notebook # ~/Repositories/Notebook
 WEBSITE_ROOT  = Path("~/Repositories/Website").expanduser()
 
 CONTENT_DIR = WEBSITE_ROOT / "content"
@@ -39,7 +39,7 @@ SOURCES = [
     {
         # NOTES
         "publish": True,
-        "source_dir": OBSIDIAN_ROOT / "z",
+        "source_dir": OBSIDIAN_ROOT / "w",
         "target_dir": CONTENT_DIR / "notebook",
         "include_subdirs": False,
     },
