@@ -1,0 +1,29 @@
+{{ define "main" }}
+
+<header class="grid-layout-centered">
+
+  <div class="header-left">
+    <a href="../.."><i>Home</i></a>
+  </div>
+
+  <div class="header-right">
+  </div>
+
+</header>
+
+<div class="grid-layout-centered">
+
+  <section class="list-narrow">
+
+    {{ if .Content }}
+        <!--{{ partial "content-parsed.html" . }}-->
+        🚧 This page is being worked on...
+    {{ end }}
+
+  </section>
+
+  <!--{{ partial "feed.html" . }}-->
+
+</div>
+
+{{ end }}
