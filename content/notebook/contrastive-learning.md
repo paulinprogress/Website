@@ -7,7 +7,7 @@ title: Contrastive Learning
 
 # Contrastive Learning
 
-Ein [[Machine Learning]]-Verfahren, bei dem latente Repräsentation von Eingangsdaten erlernt werden (siehe: [[Representation Learning]]), und zwar so, dass ähnliche Daten im Repräsentationsraum möglichst nahe beieinander encodiert werden und unähnliche Daten möglichst weit entfernt voneinander. Dies hat sich als effektive Methode mit erstaunlicher [[Generalisierung|Generalisierungsfähigkeit]] und Robustheit gegenüber Adversarial Attacks erwiesen [[(Ran Liu, 2021) Understand and Improve Contrastive Learning Methods for Visual Representation - A Review|(Liu, 2021)]].
+[[Machine Learning]]-Verfahren, bei dem latente Repräsentation von Eingangsdaten erlernt werden (siehe: [[Representation Learning]]), und zwar so, dass ähnliche Daten im Repräsentationsraum möglichst nahe beieinander encodiert werden und unähnliche Daten möglichst weit entfernt voneinander. Dies hat sich als effektive Methode mit erstaunlicher [[Generalisierung|Generalisierungsfähigkeit]] und Robustheit gegenüber Adversarial Attacks erwiesen [[(Ran Liu, 2021) Understand and Improve Contrastive Learning Methods for Visual Representation - A Review|(Liu, 2021)]].
 
 Während des Trainings werden Datenpunkte ausgewählt und mit positiven oder negativen Beispielen verglichen, indem Ähnlichkeitswerte im latenten Raum berechnet werden, z.B. als [[Cosine Similarity|Kosinus-Ähnlichkeiten]]. Die [[Verlustfunktionen|Verlustfunktion]] gibt dann ein Maß dafür, ob positive Paare (ähnliche Datenpunkte) tatsächlich hohe Ähnlichkeitswerte im latenten Raum aufweisen und ob negative Paare (unähnliche Datenpunkte) niedrigere Werte haben. Das Training ist in der Regel sehr rechenintensiv, da oft viele Beispiele gleichzeitig in einem Schritt verglichen werden.
 
@@ -33,7 +33,7 @@ CL wurde auch für das [[Supervised Learning|überwachte Lernen]] angepasst. Hie
 ---
 
 - ↩
-	- Umfassender Überblick: [Lil’Log - Contrastive Representation Learning](https://lilianweng.github.io/posts/2021-05-31-contrastive/)
+	- Überblick: [Lil’Log - Contrastive Representation Learning](https://lilianweng.github.io/posts/2021-05-31-contrastive/)
 	- Einige Methoden:
 		- [[(Chen et al., 2020) A Simple Framework for Contrastive Learning of Visual Representations]] ([Weblink](https://arxiv.org/abs/2002.05709))
 		- [[(Kalantidis et al., 2020) Hard Negative Mixing for Contrastive Learning]] ([Weblink](https://arxiv.org/abs/2010.01028))

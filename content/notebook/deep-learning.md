@@ -7,7 +7,7 @@ title: Deep Learning
 
 # Deep Learning
 
-Teilbereich des [[Machine Learning]] (siehe auch: [[Künstliche Intelligenz]]), der sich (einfach gesagt) mit Modellen beschäftigt, die viele Schichten haben. Während die Grundlagen des Machine Learning und [[Neuronale Netze|neuronaler Netze]] schon vor längerer Zeit entwickelt wurden, ist Deep Learning vor allem mit dem signifikanten Anstieg der Rechenleistung von Computern verbunden. (Siehe: [[Computer Science]])
+Einfach gesagt ein Teilbereich des [[Machine Learning]], der sich mit Modellen mit vielen Schichten beschäftigt. Während die Grundlagen des Machine Learning und [[Neuronale Netze|neuronaler Netze]] schon vor längerer Zeit entwickelt wurden, ist Deep Learning vor allem mit dem signifikanten Anstieg der Rechenleistung von Computern verbunden (siehe: [[Computer Science]]).
 
 Im Abstrakten ist Deep Learning eine Hierarchie der Mustererkennung; erst werden simple Konzept erlernt, dann komplexere Konzepte, die auf den simplen aufbauen – visuell veranschaulicht entsteht ein Graph mit vielen Ebenen (deep layers). Somit kann Deep Learning auch als eine Form des [[Representation Learning]] verstanden werden:
 

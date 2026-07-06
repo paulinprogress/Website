@@ -7,14 +7,13 @@ title: Simple rules produce complex behavior, complex rules produce stupid behav
 
 # Simple rules produce complex behavior, complex rules produce stupid behavior
 
-Eine Paraphrase von [[Gall’s Law]] aus [[(Gordon Brander, 2022) All you need is links|Gordon Brander’s Artikel]];
+Siehe: [[Systeme]]
 
+Eine Paraphrase von [[Gall’s Law]] aus [[(Gordon Brander, 2022) All you need is links|Gordon Brander’s Artikel]];
 - Einfache Regeln führen zu flexiblen, anpassungsfähigen Systemen
 - Komplexe Regeln machen Systeme oft fragil, unbrauchbar oder unintelligent
 
-Siehe: [[Systeme]] (auch etwa: [[Selbstorganisation]], [[Personal Knowledge Management]])
-
-Siehe auch: [[Persönliches Taskmanagement sollte so simpel wie möglich sein]]
+Anwendbar auf etwa [[Selbstorganisation]]/[[Personal Knowledge Management]], aber auch [[Game Design]], etc.
 
 ---
 

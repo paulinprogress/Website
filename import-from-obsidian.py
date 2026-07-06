@@ -19,7 +19,7 @@ Imports markdown files from Obsidian notebook to Hugo-based website.
 """
 
 # Define directories
-OBSIDIAN_ROOT = Path("~/Obsidian/Notebook").expanduser() # ~/Obsidian/Notebook # ~/Repositories/Notebook
+OBSIDIAN_ROOT = Path("~/Repositories/Notebook").expanduser() # ~/Obsidian/Notebook # ~/Repositories/Notebook
 WEBSITE_ROOT  = Path("~/Repositories/Website").expanduser()
 
 CONTENT_DIR = WEBSITE_ROOT / "content"
@@ -254,7 +254,7 @@ def import_notes():
         
         if group["publish"]:
             dst_root.mkdir(parents=True, exist_ok=True)
-            clean_target_dir(dst_root, "_index.md")
+            clean_target_dir(dst_root, ["_index.md"])
             print(f"Cleaned target content directory: {dst_root}")
 
             for file in collect_md_files(src):

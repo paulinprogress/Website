@@ -19,8 +19,7 @@ Limitationen:
 
 - Multiplikator variiert je nach [[Game Genres|Genre]], Zielgruppe, Preis, etc.
 - [[Early Access]], Sales, Free-to-Play, Demos & Bundles können die Zahl stark verzerren
-- Bei sehr bekannten Spielen oder Studios ist die Quote oft schlechter (niedrigerer Multiplikator)
-- Bei sehr nischigen Spielen mit kleiner, engagierter Fanbase manchmal höher
+- Bei sehr bekannten Spielen oder Studios ist die Quote oft schlechter als bei sehr nischigen Spielen mit kleiner, engagierter Fanbase
 
 ---
 

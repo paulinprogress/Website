@@ -7,9 +7,9 @@ title: Convolutional Neural Networks
 
 # Convolutional Neural Networks
 
-Ein **Convolutional Neural Network** (CNN) ist ein spezielles [[Neuronale Netze|neuronales Netz]], das hauptsächlich zur [[Bildklassifikation]] entwickelt wurde. Es verwendet Konvolutionsschichten (convolution layers), um ein Eingangsbild Schritt für Schritt in immer abstraktere “Feature Maps” zu verarbeiten.
+Ein spezielles [[Neuronale Netze|neuronales Netz]], das hauptsächlich zur [[Bildklassifikation]] entwickelt wurde. Es verwendet Konvolutionsschichten (convolutional layers), um ein Eingangsbild Schritt für Schritt in immer abstraktere “Feature Maps” zu verarbeiten.
 
->![[(Lo et al., 2020) Convolutional Neural Network Architektur.webp]]
+>![](https://www.mdpi.com/sensors/sensors-20-03539/article_deploy/html/images/sensors-20-03539-g001.png)
 >
 >Quelle: [Lo et al. (2020)](https://www.mdpi.com/1424-8220/20/12/3539)
 
@@ -25,7 +25,7 @@ Die Architektur eines CNN besteht typischerweise aus mehreren Schichten, die in 
 1. **Eingabeschicht (Input Layer)**: Diese Schicht nimmt die Rohdaten auf, z.B. ein Bild in Form eines 2D-Arrays von Pixelwerten.
 2. **Faltungsschicht (Convolutional Layer)**: Diese Schicht führt die eigentliche Faltung (Convolution) durch, indem sie einen Filter (Kernel) über das Eingabebild verschiebt und Punktoperationen durchführt. Das Ergebnis ist eine Feature-Map, die lokale Merkmale des Bildes extrahiert. Jeder Filter kann unterschiedliche Merkmale wie Kanten, Ecken oder Texturen erkennen.
 
->![[(IBM) What are convolutional neural networks (Filter).webp]]
+>![](https://assets.ibm.com/is/image/ibm/iclh-diagram-convolutional-neural-networks?fmt=png-alpha&dpr=on%2C1&wid=1584&hei=891)
 >
 >Quelle: [IBM](https://www.ibm.com/think/topics/convolutional-neural-networks)
 
@@ -39,6 +39,5 @@ Das Training eines CNN erfolgt in der Regel durch [[Backpropagation]] und [[Grad
 ---
 
 - ↩
-	- Grundlegende Forschungsarbeiten:
-		- [Fukushima (1980) - Neocognitron: A Self-organizing Neural Network Model for a Mechanism of Pattern Recognition Unaffected by Shift in Position](https://www.rctn.org/bruno/public/papers/Fukushima1980.pdf)
-		- [LeCun (1989) - Backpropagation Applied to Handwritten Zip Code Recognition](https://yann.lecun.com/exdb/publis/pdf/lecun-89e.pdf)
+	- [(Fukushima, 1980) Neocognitron: A Self-organizing Neural Network Model for a Mechanism of Pattern Recognition Unaffected by Shift in Position](https://www.rctn.org/bruno/public/papers/Fukushima1980.pdf)
+	- [(LeCun, 1989) Backpropagation Applied to Handwritten Zip Code Recognition](https://yann.lecun.com/exdb/publis/pdf/lecun-89e.pdf)

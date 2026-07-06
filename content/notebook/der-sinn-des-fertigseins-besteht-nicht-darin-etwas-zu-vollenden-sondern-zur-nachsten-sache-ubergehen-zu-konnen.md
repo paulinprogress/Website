@@ -11,12 +11,11 @@ title: Der Sinn des Fertigseins besteht nicht darin, etwas zu vollenden, sondern
 Siehe: [[Motivation]], [[Prokrastination]]
 
 Aus [[Cult of Done]]:
-
 - *Done* bedeutet nicht, dass etwas perfekt oder endgültig ist.
-- *Done* bedeutet eine Schleife zu schließen und [[Energiemanagement|Energie]] für das nächste Projekt freizusetzen.
-- Wenn Projekte ewig offenbleiben, entsteht ein Gefühl von Stagnation; die [[Motivation]] sinkt.
+- *Done* bedeutet einen Loop zu schließen und Energie für das nächste Projekt freizusetzen. (siehe auch: [[Energiemanagement]])
+- Wenn Projekte ewig offen bleiben, entsteht ein Gefühl von Stagnation, die [[Motivation]] sinkt.
 - *Done* ermöglicht es, [[Lernen|Erfahrungen zu integrieren]] und sich [[Kreativität|kreativ]] weiterzuentwickeln.
-- Im [[Kreativer Prozess|Kreativen Prozess]] geht es weniger um "Endprodukte" als um die Fähigkeit, in Bewegung zu bleiben und neue Ideen tatsächlich _in die Welt zu bringen_.
+- Im [[Kreativer Prozess|kreativen Prozess]] geht es weniger um "Endprodukte" als um die Fähigkeit, in Bewegung zu bleiben und neue Ideen tatsächlich _in die Welt zu bringen_.
 
 Siehe auch: [[Closing the gap]], [[Ideas are not enough]]
 

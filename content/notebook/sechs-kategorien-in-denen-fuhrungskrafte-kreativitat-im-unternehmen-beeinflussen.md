@@ -7,7 +7,7 @@ title: Sechs Kategorien, in denen Führungskräfte Kreativität im Unternehmen b
 
 # Sechs Kategorien, in denen Führungskräfte Kreativität im Unternehmen beeinflussen
 
-Teresa M. Amabile beschreibt in einem Beitrag die Schlussfolgerungen ihrer Forschung in diesem Bereich. (Siehe: [[Kreativität]], [[Leadership]], [[Betriebswirtschaft|BWL]])
+Teresa M. Amabile beschreibt in einem Beitrag die Schlussfolgerungen ihrer Forschung im Bereich [[Kreativität]] und [[Leadership]].
 
 Vorweg heißt es: [[Kreativität ist abhängig von Kreativen Denkfähigkeiten, Expertise und Motivation]]. Alle drei Aspekte ließen sich als [[Leadership|Führungskraft]] eines Unternehmens beeinflussen.
 

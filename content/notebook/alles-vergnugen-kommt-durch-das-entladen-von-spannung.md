@@ -7,9 +7,7 @@ title: Alles Vergnügen kommt durch das Entladen von Spannung
 
 # Alles Vergnügen kommt durch das Entladen von Spannung
 
-Ursprung: [[Sigmund Freud]] (siehe: [[Lustprinzip]]).
-
-Lässt sich gut auf Dramaturgie übertragen: (siehe: [[Kreatives Schreiben]], [[Narrative Design]])
+Ursprung: [[Sigmund Freud]] (siehe: [[Lustprinzip]]). Lässt sich gut auf Dramaturgie übertragen (siehe: [[Kreatives Schreiben]], [[Narrative Design]]):
 
 - In Geschichten entsteht Vergnügen oft durch das Aufbauen und gezielte Auflösen [[Emotionen|emotionaler]] Spannung
 - Siehe: [[Dramaturgische Spannung entsteht zwischen Angst und Hoffnung]]

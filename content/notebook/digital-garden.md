@@ -13,7 +13,7 @@ Aus [Digital Gardening Tools and Resources](https://github.com/MaggieAppleton/di
 
 >*A garden is something inbetween a personal blog and a wiki. It's a collection of evolving notes, essays, and ideas that aren't strictly organized by their publication date. They're inherently exploratory – posts are linked through contextual associations. They aren't refined or complete - posts can be published as half-finished thoughts that will grow and evolve over time. They're less rigid, less performative, and less perfect than the personal "blogs" we're used to encountering on the web.*
 
-Ich mag diese Idee/Metapher irgendwie… hat etwas friedliches, [[Meditation|meditatives]]. Ist im Grunde mein Ansatz für [[Obsidian]], wenn auch nicht unbedingt *öffentlich*.
+Ich mag diese Idee/Metapher irgendwie, es hat etwas [[Meditation|meditatives]]… Ist im Grunde mein Ansatz für meine [[Obsidian]]-Notizen.
 
 Vergleich mit [[Zettelkasten]]:
 

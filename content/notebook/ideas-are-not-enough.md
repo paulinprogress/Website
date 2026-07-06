@@ -13,7 +13,7 @@ title: Ideas are not enough
 
 In Bezug auf [[Game Development]]:
 
-- [[Unser Verstand ist kein guter Games-Simulator]]; Spielideen sind wertlos, bis sie im Rahmen eines [[Prototyping|Prototypes]] validiert wurden.
+- [[Der Verstand ist kein guter Games-Simulator]]; Spielideen sind wertlos, bis sie im Rahmen eines [[Prototyping|Prototypes]] validiert wurden.
 - Bzw.: Gutes [[Game Design]]/[[Design]] entsteht selten nur im Kopf, sondern entwickelt sich erst durch [[Prototyping]], Experimentieren und [[Playtesting]] → [[Design entsteht durch Iteration]]
 - Deshalb: Nicht an Ideen die Zähne ausbeißen (siehe: [[Idea Prison]])
 

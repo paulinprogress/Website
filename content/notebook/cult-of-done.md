@@ -29,7 +29,7 @@ Das “Done Manifesto” (von Bre Pettis & Kio Stark):
 
 Oder als [[Illustration]]:
 
->![[(James Provost) Done Manifesto Poster.webp]]
+>![](https://polysthetic.com/wp-content/uploads/2019/11/3327377382_be705a4089_o.png)
 >
 >Quelle: [James Provost](https://jamesprovost.com/done-manifesto-prints/)
 

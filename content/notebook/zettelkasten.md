@@ -11,8 +11,8 @@ Ein System aus vielen verschiedenen Zetteln bzw. Karteikarten, welche jeweils ge
 
 Entwickelt von [[Niklas Luhmann]], um ihm in seiner akademischen [[Wissenschaft|Forschung]] zu helfen:
 
->![[Zettelkasten (2).webp]]
->![[Zettelkasten (1).webp]]
+>![](https://niklas-luhmann-archiv.de/assets/texts/nachlass/images/2_ZK_Oerlinghausen_Uniarchiv.jpg)
+>![](https://niklas-luhmann-archiv.de/assets/texts/nachlass/images/1_ZK_kybernetisches_System.jpg)
 >
 >Quelle: [Niklas Luhmann-Archiv](https://niklas-luhmann-archiv.de/nachlass/zettelkasten)
 

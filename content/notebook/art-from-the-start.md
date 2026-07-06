@@ -7,7 +7,11 @@ title: Art from the start
 
 # Art from the start
 
-TL;DR: Die [[Motivation]] kann im (Solo/Indie) [[Game Development]]/[[Prototyping]] schnell nachlassen, wenn man sich lange *nur* mit [[Game Mechaniken|Mechaniken]]/Systemen beschäftigt und [[Game Ästhetiken|Ästhetik]] bzw. [[Game Art|Art]] vernachlässigt.
+Siehe: [[Game Development]], [[Prototyping]]
+
+Der Ansatz, sich (entgegen der herkömmlichen Ratschläge) schon früh auch mit [[Ästhetik]] bzw. [[Game Art|Art]] zu beschäftigen – also nicht *nur* mit [[Game Mechaniken|Mechaniken]]/Systemen – um die [[Motivation]] aufrecht zu erhalten und schnell etwas visuell ansprechendes zu haben.
+
+Ich selbst schwanke hin und her; es kommt wahrscheinlich auf das Projekt an. Dass die Motivation sonst einbrechen kann ist jedenfalls wahr…
 
 ---
 

@@ -17,4 +17,4 @@ Siehe: [[UI Design]], [[UX Design]], [[Web Design]], [[Game Design]]
 
 - ↩
 	- Aus: [[(Jakob Nielsen, 1994) 10 Usability Heuristics for User Interface Design]] ([Weblink](https://www.nngroup.com/articles/ten-usability-heuristics/))
-	- Erklärt: [(Yogesh Mithoon) Jakob’s Law Explained in Simple Terms](https://bootcamp.uxdesign.cc/ux-laws-jakobs-law-explained-in-simple-terms-fbeb0d794318)
+	- Erklärt: [(Yogesh Mithoon, 2023) Jakob’s Law Explained in Simple Terms](https://bootcamp.uxdesign.cc/ux-laws-jakobs-law-explained-in-simple-terms-fbeb0d794318)
