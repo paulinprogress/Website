@@ -93,10 +93,10 @@ header {
   height: fit-content;
   pointer-events: auto;
 }
-.header-left > a::before {
+/*.header-left > a::before {
   content: "↜ ";
   line-height: 0;
-}
+}*/
 .header-middle {
   grid-column: 2;
   height: fit-content;
@@ -327,17 +327,27 @@ embed {
 
 /* HOME ------------------------------------------------------------------------------------------------------------------------------- */
 
-.home {
-  grid-column: 2;
-  margin-bottom: 6rem;
-}
-
 .home-image-row {
   display: flex;
   gap: 1.5rem;
+
+  margin-left: calc(-1 * var(--margin-sides));
+  margin-right: calc(-1 * var(--margin-sides));
+  padding-left: var(--margin-sides);
+  padding-right: var(--margin-sides);
+
+  overflow-x: auto;
+  overflow-y: hidden;
+
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+.home-image-row::-webkit-scrollbar {
+  display: none;
 }
 .home-image {
-  width: 180px;
+  flex: 0 0 auto;
+  width: 240px;
 }
 
 /* PORTFOLIO -------------------------------------------------------------------------------------------------------------------------- */
@@ -464,10 +474,12 @@ embed {
   }
 
   footer {
-    padding-top: 0.8rem;
-    border-top: 1px solid color-mix(in srgb, var(--dividers) 30%, transparent);
     flex-direction: column;
-    gap: 0.8rem;
+  }
+  footer > div:first-of-type {
+    border-bottom: 1px solid color-mix(in srgb, var(--dividers) 30%, transparent);
+    padding-bottom: 1lh;
+    margin-bottom: 0.4rem;
   }
 
   .list-narrow {
