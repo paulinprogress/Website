@@ -1,6 +1,6 @@
 # [paulhofmann.dev](https://paulhofmann.dev)
 
-<script type='text/javascript' src='https://storage.ko-fi.com/cdn/widget/Widget_2.js'></script><script type='text/javascript'>kofiwidget2.init('Support me on Ko-fi', '#72a4f2', 'E7B022OWW0');kofiwidget2.draw();</script>
+[![Ko-Fi](https://img.shields.io/badge/Ko--fi-F16061?style=for-the-badge&logo=ko-fi&logoColor=white)](https://ko-fi.com/paulinprogress)
 
 This is my personal portfolio website, built with [Hugo](https://gohugo.io/) using custom themes, hosted with [GitHub Pages](https://docs.github.com/).
 
