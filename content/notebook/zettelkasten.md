@@ -62,10 +62,11 @@ Im [[Internet]] findet man viel Vages und Widersprüchliches, daher hier eine ku
 
 ---
 
-- Einführung:
-	- [[(Zettelkasten.de, 2022) Introduction to the Zettelkasten-Method]] ([Weblink](https://zettelkasten.de/introduction/))
-	- [(Johannes Schmidt, 2016) Der Zettelkasten als Zweitgedächtnis Niklas Luhmanns](https://vimeo.com/173128404)
-- Diskurs:
-	- Finden von Assoziationen: [[(Zettelkasten.de, 2022) How To Use Creative Techniques Within the Zettelkasten Framework]] ([Weblink](https://zettelkasten.de/posts/creative-technique-within-zettelkasten-framework))
-	- Mehr zu Assoziationen: [[(Zettelkasten.de, 2015) Different Kinds of Ties Between Notes]] ([Weblink](https://www.zettelkasten.de/posts/kinds-of-ties/))
-	- PARA und Zettelkasten: [[(Zettelkasten.de, 2023) Building a Second Brain und die Zettelkasten Methode]] ([Weblink](https://zettelkasten.de/de/posts/building-a-second-brain-und-zettelkasten-methode/))
+- ↩
+	- Einführung:
+		- [[(Zettelkasten.de, 2022) Introduction to the Zettelkasten-Method]] ([Weblink](https://zettelkasten.de/introduction/))
+		- [(Johannes Schmidt, 2016) Der Zettelkasten als Zweitgedächtnis Niklas Luhmanns](https://vimeo.com/173128404)
+	- Diskurs:
+		- Finden von Assoziationen: [[(Zettelkasten.de, 2022) How To Use Creative Techniques Within the Zettelkasten Framework]] ([Weblink](https://zettelkasten.de/posts/creative-technique-within-zettelkasten-framework))
+		- Mehr zu Assoziationen: [[(Zettelkasten.de, 2015) Different Kinds of Ties Between Notes]] ([Weblink](https://www.zettelkasten.de/posts/kinds-of-ties/))
+		- PARA und Zettelkasten: [[(Zettelkasten.de, 2023) Building a Second Brain und die Zettelkasten Methode]] ([Weblink](https://zettelkasten.de/de/posts/building-a-second-brain-und-zettelkasten-methode/))
