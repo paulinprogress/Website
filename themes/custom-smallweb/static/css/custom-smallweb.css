@@ -86,10 +86,12 @@ header {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  pointer-events: none;
 }
 .header-left {
   grid-column: 1;
   height: fit-content;
+  pointer-events: auto;
 }
 .header-left > a::before {
   content: "↜ ";
@@ -109,6 +111,7 @@ header {
   flex-direction: row;
   justify-content: flex-end;
   gap: 1.5rem;
+  pointer-events: auto;
 }
 
 /* Footer */
@@ -311,12 +314,15 @@ embed {
   grid-template-columns: 1fr 4fr;
 }
 
-.guestbook-container {
+/*.guestbook-container {
   margin-top: -10.2rem;
   margin-left: -1.55rem;
-}
+}*/
 .chat-container {
-  margin-top: 0; 
+  height: 80dvh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
 }
 
 /* HOME ------------------------------------------------------------------------------------------------------------------------------- */
