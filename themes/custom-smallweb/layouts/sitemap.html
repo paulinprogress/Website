@@ -14,11 +14,13 @@
 <div class="grid-layout-biased">
 
   <section class="standalone-narrow">
-    {{ if .Content }}
-        <!--{{ partial "content-parsed.html" . }}-->
-    {{ end }}
+    
+    <nav class="sitemap">
+      {{ if .Content }}
+        {{ partial "content-parsed.html" . }}
+      {{ end }}
+    </nav>
 
-    {{ partial "sitemap.html" }}
   </section>
 
 </div>

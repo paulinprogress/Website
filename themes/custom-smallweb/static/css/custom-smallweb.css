@@ -254,9 +254,11 @@ embed {
 .sitemap > a {
   margin-left: 0;
 }
-.sitemap > p {
-  margin-left: var(--indentation);
+.sitemap > p:not(:first-of-type) {
   margin-bottom: 0;
+}
+.indent {
+  margin-left: var(--indentation);
 }
 .sitemap > h2 {
   font-size: var(--font-size);
