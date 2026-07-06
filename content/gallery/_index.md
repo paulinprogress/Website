@@ -1,4 +1,3 @@
 ---
-layout: standalone-wide
 ---
 🚧 This page is under construction...
