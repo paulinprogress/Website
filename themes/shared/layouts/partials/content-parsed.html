@@ -5,7 +5,13 @@
 {{ range partial "extract-wikilinks.html" (dict
     "content" $out
     "type" "image") }}
-  {{ $replacement := printf `<img src="/attachments/%s" />` .file }}
+
+  {{- $style := "" -}}
+  {{- if .size -}}
+    {{- $style = printf ` style="width:%spx;"` .size -}}
+  {{- end -}}
+
+  {{- $replacement := printf `<img src="/attachments/%s"%s />` .file $style -}}
   {{ $out = replace $out .match $replacement }}
 {{ end }}
 

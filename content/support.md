@@ -1,18 +1,6 @@
 ---
 layout: standalone-narrow
 ---
-If you want to support me:
-- Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-- Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-- Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-- Duis aute irure dolor in reprehenderit.
-- In voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-- At vero eos et accusamus et iusto odio dignissimos.
-- Ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas.
-- Molestias excepturi sint occaecati cupiditate non provident.
-- Similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga.
-- Et harum quidem rerum facilis est et expedita distinctio.
-- Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus.
-- Temporibus autem quibusdam et aut.
-- Officiis debitis aut rerum necessitatibus saepe eveniet.
-- Ut et voluptates repudiandae sint et molestiae non recusandae. Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat.
+I'm still setting up a lot of stuff, but for the time being: if you already want to support me or give a small tip, for whatever reason, here's my Ko-fi link!
+
+[![Buy me a coffee!|100](https://img.shields.io/badge/Ko--fi-F16061?style=for-the-badge&logo=ko-fi&logoColor=white)](https://ko-fi.com/paulinprogress)

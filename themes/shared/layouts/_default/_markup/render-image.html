@@ -1,0 +1,19 @@
+<!-- Handle alt text & width for image links -->
+
+{{- $alt := .Text -}}
+{{- $src := .Destination -}}
+
+{{- $parts := split $alt "|" -}}
+{{- $altText := index $parts 0 -}}
+{{- $size := "" -}}
+
+{{- if ge (len $parts) 2 -}}
+  {{- $size = index $parts 1 -}}
+{{- end -}}
+
+{{- $style := "" -}}
+{{- if $size -}}
+  {{- $style = (printf "width:%spx;" $size) | safeCSS -}}
+{{- end -}}
+
+<img src="{{ $src }}" alt="{{ $altText }}" {{ if $style }}style="{{ $style }}"{{ end }}>

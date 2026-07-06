@@ -211,6 +211,11 @@ a.external::after {
   background-size: contain;
   background-position: left;
 }
+a.external:has(img)::after,
+a.external:has(video)::after,
+a.external:has(svg)::after {
+  display: none;
+}
 
 /* Misc. */
 section {

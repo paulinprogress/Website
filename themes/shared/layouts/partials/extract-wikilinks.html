@@ -3,7 +3,7 @@
 
 {{- $patterns := dict
   "wikilink" `\[\[([^\|\]]+)(\|([^\]]+))?\]\]`
-  "image"    `!\[\[(.+?\.(?:webp|jpg|jpeg|png|svg))\]\]`
+  "image"    `!\[\[(.+?\.(?:webp|jpg|jpeg|png|svg))(?:\|(\d+))?\]\]`
   "video"    `!\[\[(.+?\.(?:webm|mp4|gif))\]\]`
   "pdf"      `!\[\[(.+?\.(?:pdf))\]\]`
 -}}
@@ -24,8 +24,9 @@
     {{- $results = $results | append (dict
       "match" $match
       "file" (replaceRE $pattern "$1" $match)
+      "size" (replaceRE $pattern "$2" $match)
     ) -}}
-  {{- end }}
+  {{- end -}}
 {{- end -}}
 
 {{- return $results -}}
