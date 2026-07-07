@@ -1,5 +1,0 @@
----
----
-# Gallery
-
-🚧 This page is under construction...

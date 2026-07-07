@@ -69,7 +69,7 @@
 {{ $out = replaceRE `\(\s+<a` "(<a" $out }}
 
 <!-- Swap sources/references icon in notebook -->
-{{ $icon := `<img class="refs-icon" src="/assets/icons/iconoir/multiple-pages.svg">` }}
+{{ $icon := `<span class="refs-icon"></span>` }}
 {{ $out = replace $out "↩" $icon }}
 
 {{ $out | safeHTML }}

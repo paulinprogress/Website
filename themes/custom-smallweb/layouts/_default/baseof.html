@@ -10,7 +10,18 @@
   <link rel="stylesheet" href="/css/shared.css" />
   <link rel="stylesheet" href="/css/custom-smallweb.css" />
 </head>
-<body>
+
+{{ $color := "" }}
+
+{{ if eq .Section "finds" }}
+  {{ $color = "pink" }}
+{{ else if eq .RelPermalink "/canon/" }}
+  {{ $color = "pink" }}
+{{ else if eq .RelPermalink "/colophon/" }}
+  {{ $color = "green" }}
+{{ end }}
+
+<body class="{{ $color }}">
 
   <main class="page">
     {{ block "main" . }}
@@ -19,5 +30,6 @@
   </main>
 
   {{ partial "footer.html" . }}
+
 </body>
 </html>
