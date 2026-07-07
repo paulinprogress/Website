@@ -79,12 +79,12 @@ main {
 header {
   position: absolute;
   width: 100%;
-  top: var(--margin-top);
+  top: 0;
   left: 0;
   right: 0;
+  padding-top: var(--margin-top);
   padding-left: var(--margin-sides);
   padding-right: var(--margin-sides);
-  margin-bottom: 1lh;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -118,8 +118,6 @@ header {
 
 /* Footer */
 footer {
-  /*border-top: 1px solid color-mix(in srgb, var(--dividers) 30%, transparent);*/
-  /*border-bottom: 1px solid color-mix(in srgb, var(--dividers) 20%, transparent);*/
   padding-top: 0.5rem;
   margin-top: 1rem;
   vertical-align: bottom;
@@ -488,9 +486,10 @@ pre code {
   }
 
   header {
-    position: relative;
     flex-direction: row !important;
+    position: relative;
     padding: 0;
+    margin-bottom: 1lh;
   }
 
   footer {
@@ -507,7 +506,6 @@ pre code {
   }
   .single-narrow {
     padding: 0;
-    margin-top: 1lh;
   }
 
   .portfolio-grid-big {
