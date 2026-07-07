@@ -543,4 +543,18 @@ pre code {
   .home-image-row > img:not(:first-of-type) {
     display: none;
   }
+
+  .portfolio-intro {
+    margin-bottom: 2lh;
+  }
+  .portfolio-grid-big,
+  .portfolio-grid-small {
+    gap: 1rem;
+  }
+  .portfolio-grid-big {
+    margin-bottom: 1rem;
+  }
+  .portfolio-grid-small {
+    margin-top: 1rem;
+  }
 }
