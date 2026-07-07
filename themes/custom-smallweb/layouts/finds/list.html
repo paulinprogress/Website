@@ -13,10 +13,34 @@
 
 </header>
 
-<article class="standalone-wide">
+<section class="standalone-wide">
+
     {{ if .Content }}
         {{ partial "content-parsed.html" . }}
     {{ end }}
-</article>
+
+    <hr>
+
+    <div class="gallery">
+
+      {{ range sort .Pages ".File.BaseFileName" "desc" }}
+
+        <article class="gallery-card" style="--count: {{ len .Params.images }}">
+
+          <div class="gallery-image-row">
+            {{ range .Params.images }}
+              <img src="{{ . }}" alt="">
+            {{ end }}
+          </div>
+
+          <div class="gallery-description">
+            {{ partial "content-parsed.html" . }}
+          </div>
+
+        </article>
+
+      {{ end }}
+
+</section>
 
 {{ end }}
