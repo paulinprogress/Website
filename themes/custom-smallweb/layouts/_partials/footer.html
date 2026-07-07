@@ -1,15 +1,30 @@
 {{ $date := now.Format "02 Jan 2006" }}
 
 <footer>
+  {{ if .IsHome }}
+  <div class="footer-home">
+    <a href="/portfolio">Portfolio</a>
+    <a href="/notebook">Notebook</a>
+    <a href="/gallery">Gallery</a>
+    <a href="/finds">Fresh Finds</a>
+    <a href="/canon">Canon</a>
+    <span>⋆* ⁺</span>
+    <a href="/guestbook">Guestbook</a>
+    <a href="/chat">Chat</a>
+    <a href="/support">Support</a>
+    <span>₊ ✧</span>
+    <a href="/colophon">Colophon</a>
+  </div>
+  {{ else }}
   <div>
     <span>Shortcuts:</span>
     <a href="/portfolio">Portfolio</a>
     <a href="/notebook">Notebook</a>
     <a href="/gallery">Gallery</a>
-    <!--<a href="/guestbook">Guestbook</a>-->
-    <!--<a href="/chat">Chat</a>-->
+    <a href="/finds">Fresh finds</a>
     <a href="/support">Support</a>
   </div>
+  {{ end }}
   <div>
     <span>&copy; {{ now.Year }} Paul Hofmann (Last modified: {{ $date }})</span>
   </div>
