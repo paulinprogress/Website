@@ -157,8 +157,8 @@ p:last-child {
 }
 
 blockquote {
-  padding-left: 4ch;
-  padding-right: 4ch;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
   margin-bottom: 1lh;
   border-left: 1px solid color-mix(in srgb, var(--dividers) 25%, transparent);
   opacity: 90%;
@@ -252,9 +252,15 @@ pre {
   padding-left: 1ch;
   padding-right: 1ch;
   margin-bottom: 1lh;
+
+  overflow-x: auto;
+  overflow-y: hidden;
+  max-width: 100%;
 }
 pre code {
   font-size: 14px;
+
+  white-space: pre; /* preserve formatting */
 }
 
 .arrow-icon {
@@ -533,12 +539,26 @@ pre code {
     padding-right: 1rem;
   }
 
+  header {
+    margin-bottom: 2lh;
+  }
+
   footer > div {
     gap: 1rem;
   }
   footer > div:last-child {
     font-size: 11px;
   }
+
+  h1 {
+    font-size: 1.6rem;
+    line-height: 1.8rem;
+    margin-bottom: 1rem;
+  }
+
+  pre code {
+  font-size: 11px;
+}
 
   .home-image-row > img:not(:first-of-type) {
     display: none;
