@@ -2,4 +2,6 @@
 ---
 # Gallery
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+*I like collecting & curating things.* This is a place for me to save all kinds of gems that I come across on my voyages through the internet (and occasionally the outer world); art, music, videos, articles, books, etc.
+
+See also my [canon]({{< ref "canon" >}}) page for a list of core creative inspirations that have shaped my taste and perspective.

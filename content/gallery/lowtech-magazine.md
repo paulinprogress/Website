@@ -12,4 +12,4 @@ publish: true
 title: LOW←TECH MAGAZINE
 ---
 
-[24.1] [LOW←TECH MAGAZINE](https://solar.lowtechmagazine.com/) by Kris De Decker, hosted on a solar-powered [[Raspberry Pi]] (with a charming welcome message saying “This is a solar-powered website, which means it sometimes goes offline”).
+[24.3] [LOW←TECH MAGAZINE](https://solar.lowtechmagazine.com/) by Kris De Decker, hosted on a solar-powered [[Raspberry Pi]] (with a charming welcome message that reads “This is a solar-powered website, which means it sometimes goes offline”).

@@ -14,4 +14,4 @@ publish: true
 title: (Iteria Games) Compound Fracture
 ---
 
-[25.1] [Iteria Games - Compound Fracture](https://store.steampowered.com/app/1460210/Compound_Fracture/) (yet to be released). This must be the holy grail of the whole [[PS1 Ästhetik|PS1 aesthetic]] movement. Follow [Austin Schaeffer](https://x.com/SchaefferAustin) for more previews. (Also seems to be getting a [sick soundtrack](https://cyrusposting.bandcamp.com/track/due-diligence).)
+[25.2] [Iteria Games - Compound Fracture](https://store.steampowered.com/app/1460210/Compound_Fracture/) (yet to be released). This must be the holy grail of the whole [[PS1 Ästhetik|PS1 aesthetic]] movement. Follow [Austin Schaeffer](https://x.com/SchaefferAustin) for more previews. (Also seems to be getting a [sick soundtrack](https://cyrusposting.bandcamp.com/track/due-diligence).)

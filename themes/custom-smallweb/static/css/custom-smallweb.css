@@ -235,24 +235,16 @@ a.wikilink-missing {
   text-decoration: underline dotted 1px;
   opacity: 0.8;
 }
-a.external::after {
-  content: "";
-  display: inline-block;
-  width: 12px;
-  height: 12px;
-
-  transform: translateY(-1px) translateX(1px);
-  padding-right: 1px;
-
-  background-image: var(--link-icon);
-  background-repeat: no-repeat;
-  background-size: contain;
-  background-position: left;
+a.external {
+  padding-right: 13px;
+  background: var(--link-icon) no-repeat right top;
+  background-size: 12px 12px;
 }
-a.external:has(img)::after,
-a.external:has(video)::after,
-a.external:has(svg)::after {
-  display: none;
+a.external:has(img),
+a.external:has(video),
+a.external:has(svg) {
+  padding-right: 0;
+  background: none;
 }
 
 /* Misc. */
@@ -617,5 +609,9 @@ pre code {
 
   .home-image-row > img:not(:first-of-type) {
     display: none;
+  }
+
+  a.external {
+    background-size: 11px 11px;
   }
 }

@@ -10,4 +10,4 @@ publish: true
 title: (Barbara Ann Brennan, 1988) Hands of Light
 ---
 
-[24.4] Wow, what a book… Picked up for 2€ in a second-hand bookstore on Gran Canaria. This seems to be some kind of [[New Age]] “classic” from back in the day with some truly hilarious but honestly sick illustrations.
+[24.6] Wow, what a book… Picked up for 2€ in a second-hand bookstore on Gran Canaria. This seems to be some kind of [[New Age]] “classic” from back in the day with some truly hilarious but honestly sick illustrations.

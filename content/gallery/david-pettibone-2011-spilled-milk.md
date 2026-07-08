@@ -9,4 +9,4 @@ publish: true
 title: (David Pettibone, 2011) Spilled Milk
 ---
 
-[24.2] [David Pettibone](https://davidpettibone.com/home.html) - Spilled Milk (2011). Oil on canvas, 50″x52″.
+[24.1] [David Pettibone](https://davidpettibone.com/home.html) - Spilled Milk (2011). Oil on canvas, 50″x52″.

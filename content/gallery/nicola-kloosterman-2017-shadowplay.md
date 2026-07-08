@@ -13,4 +13,4 @@ publish: true
 title: (Nicola Kloosterman, 2017) Shadowplay
 ---
 
-[24.3] [Nicola Kloosterman - Shadowplay (2017)](https://nicolakloosterman.com/series).
+[24.4] [Nicola Kloosterman - Shadowplay (2017)](https://nicolakloosterman.com/series).
