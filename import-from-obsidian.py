@@ -49,10 +49,10 @@ SOURCES = [
         "include_subdirs": False,
     },
     {
-        # FRESH FINDS
+        # GALLERY
         "publish": True,
         "source_dirs": [ OBSIDIAN_ROOT / "gallery", OBSIDIAN_ROOT / "library" ],
-        "target_dir": CONTENT_DIR / "finds",
+        "target_dir": CONTENT_DIR / "gallery",
         "include_subdirs": False,
     },
 ]
@@ -310,8 +310,8 @@ def parse_captured_date(value):
 
 
 def apply_content_indices(group, imported_files):
-    """Add a year-based index prefix to the content of imported finds notes."""
-    if group["target_dir"].name != "finds":
+    """Add a year-based index prefix to the content of imported gallery notes."""
+    if group["target_dir"].name != "gallery":
         return
 
     items = []
