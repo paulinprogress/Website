@@ -474,6 +474,28 @@ pre code {
   margin-top: 1rem;
   overflow-wrap: break-word;
 }
+.gallery-wireframe {
+  width: 240px;
+  aspect-ratio: 1;
+  border: 1px solid color-mix(in srgb, var(--text) 50%, transparent);
+  position: relative;
+  box-sizing: border-box;
+  display: block;
+}
+.gallery-wireframe::before{
+  content:"";
+  display: inline-block;
+  width: 14px;
+  height: 14px;
+
+  transform: translateY(2px) translateX(221px);
+
+  background-image: var(--link-icon);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: left;
+  opacity: 80%;
+}
 
 /* LIST NARROW (FEED) ----------------------------------------------------------------------------------------------------------------- */
 

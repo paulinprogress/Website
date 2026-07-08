@@ -1,9 +1,10 @@
+import sys
 import frontmatter
 import re
 from pathlib import Path
 import shutil
 from PIL import Image
-from datetime import datetime
+from datetime import datetime, date
 import fnmatch
 import unicodedata
 
@@ -19,8 +20,12 @@ Imports markdown files from Obsidian notebook to Hugo-based website.
 """
 
 # Define directories
-OBSIDIAN_ROOT = Path("~/Obsidian/Notebook").expanduser() # ~/Obsidian/Notebook # ~/Repositories/Notebook
 WEBSITE_ROOT  = Path("~/Repositories/Website").expanduser()
+
+if sys.platform.startswith("linux"):
+    OBSIDIAN_ROOT = Path("~/Repositories/Notebook").expanduser()
+else:
+    OBSIDIAN_ROOT = Path("~/Obsidian/Notebook").expanduser()
 
 CONTENT_DIR = WEBSITE_ROOT / "content"
 
@@ -32,29 +37,29 @@ SOURCES = [
     {
         # PORTFOLIO
         "publish": True,
-        "source_dir": OBSIDIAN_ROOT / "projects" / "portfolio",
+        "source_dirs": [ OBSIDIAN_ROOT / "projects" / "portfolio" ],
         "target_dir": CONTENT_DIR / "portfolio",
         "include_subdirs": True,
     },
     {
         # NOTES
         "publish": True,
-        "source_dir": OBSIDIAN_ROOT / "w",
+        "source_dirs": [ OBSIDIAN_ROOT / "w" ],
         "target_dir": CONTENT_DIR / "notebook",
         "include_subdirs": False,
     },
     {
         # FRESH FINDS
         "publish": True,
-        "source_dir": OBSIDIAN_ROOT / "fn" / "finds",
+        "source_dirs": [ OBSIDIAN_ROOT / "gallery", OBSIDIAN_ROOT / "library" ],
         "target_dir": CONTENT_DIR / "finds",
         "include_subdirs": False,
     },
 ]
 
 # Define frontmatter properties/keys that should be imported; rest will be removed
-ALLOWED_KEYS = {"anchors", "created", "last updated", "year", "published", "date", "opened", "closed",
-                "publish", "title", "description", "image", "images", "feature-image", "thumb-image", "project-type"}
+ALLOWED_KEYS = { "publish", "title", "description", "feature-image", "thumb-image", "project-type", 
+                 "anchors", "created", "last updated", "captured", "year", "date", "opened", "closed", "image", "images", }
 
 # Define media link patterns for handling attached media files
 IMAGE_LINK_PATTERN = re.compile(r'\[\[(.+?\.(?:webp|jpg|jpeg|png|svg))\]\]', re.IGNORECASE)
@@ -103,26 +108,40 @@ def collect_md_files(source_dir: Path):
 
 
 
-def collect_attachment_filenames(frontmatter, content):
-    """Extract all image filenames from content and frontmatter."""
+def collect_attachment_filenames(frontmatter_data, content):
+    """Extract all attachment filenames from content and frontmatter."""
     filenames = set()
 
+    def add_from_text(text):
+        if not text:
+            return
+        for match in re.finditer(r'!\[\[([^\]]+)\]\]|\[\[([^\]]+)\]\]', text):
+            ref = match.group(1) or match.group(2)
+            if not ref:
+                continue
+            if re.search(r'\.(?:webp|jpg|jpeg|png|svg|webm|mp4|gif|pdf)$', ref, re.IGNORECASE):
+                filenames.add(ref)
+
+    def add_from_value(value):
+        if isinstance(value, (list, tuple)):
+            for item in value:
+                add_from_value(item)
+            return
+
+        if isinstance(value, dict):
+            for item in value.values():
+                add_from_value(item)
+            return
+
+        if isinstance(value, str):
+            add_from_text(value)
+
     # From content
-    wikilink_images = re.findall(r'!\[\[([^\]]+)\]\]', content)
-    filenames.update(wikilink_images)
+    add_from_text(content)
 
     # From frontmatter
-    for property in frontmatter:
-        raw = str(frontmatter[property] or "")
-        image_match = re.match(IMAGE_LINK_PATTERN, raw)
-        video_match = re.match(VIDEO_LINK_PATTERN, raw)
-        pdf_match = re.match(PDF_LINK_PATTERN, raw)
-        if image_match:
-            filenames.add(image_match.group(1))
-        elif video_match:
-            filenames.add(video_match.group(1))
-        elif pdf_match:
-            filenames.add(pdf_match.group(1))  
+    for property in frontmatter_data:
+        add_from_value(frontmatter_data[property])
 
     return filenames
 
@@ -178,10 +197,14 @@ def find_and_copy_attachments(filenames):
 
 
 
+def strip_comments(text: str) -> str:
+    """Remove Obsidian-style comments from content."""
+    return re.sub(r"%%.*?%%", "", text, flags=re.DOTALL)
+
+
 def prepare_content(text: str) -> str:
     """Prepare & clean up content."""
-    # Remove all %% comments, multiline or inline
-    text = re.sub(r"%%.*?%%", "", text, flags=re.DOTALL)
+    text = strip_comments(text)
 
     # Convert attachment links (ensure WebP/WebM)
     def replace_image(match):
@@ -207,39 +230,113 @@ def prepare_frontmatter(post: frontmatter.Post, filepath: Path) -> frontmatter.P
     keys_to_remove = set(post.metadata.keys()) - ALLOWED_KEYS
     for key in keys_to_remove:
         del post.metadata[key]
-    
+
     # Ensure minimum required frontmatter fields exist
     if "title" not in post.metadata:
         post.metadata["title"] = filepath.stem
     if "publish" not in post.metadata:
         post.metadata["publish"] = False
-    
+
     # Convert attachment links
     relative_attach_dir = ATTACHMENTS_TARGET_DIR.relative_to(WEBSITE_ROOT / "static")
 
+    def normalize_value(value):
+        if isinstance(value, (list, tuple)):
+            return [normalize_value(item) for item in value]
+
+        if not isinstance(value, str):
+            return value
+
+        raw_str = value
+        if raw_str.startswith("/"):
+            return raw_str
+
+        def replace_reference(match):
+            filename = Path(match.group(1))
+            ext = filename.suffix.lower()
+
+            if ext in [".jpg", ".jpeg", ".png", ".svg", ".webp"]:
+                new_name = f"{filename.stem}.webp"
+            elif ext in [".mp4", ".gif", ".webm"]:
+                new_name = f"{filename.stem}.webm"
+            elif ext == ".pdf":
+                new_name = filename.name
+            else:
+                new_name = filename.name
+
+            return "/" + (relative_attach_dir / new_name).as_posix()
+
+        updated = re.sub(IMAGE_LINK_PATTERN, replace_reference, raw_str)
+        updated = re.sub(VIDEO_LINK_PATTERN, replace_reference, updated)
+        updated = re.sub(PDF_LINK_PATTERN, replace_reference, updated)
+        return updated
+
     for property in list(post.metadata.keys()):
-        # Get the raw value
-        raw = post.metadata[property]
-        raw_str = str(raw)
-
-        image_match = re.match(IMAGE_LINK_PATTERN, raw_str)
-        video_match = re.match(VIDEO_LINK_PATTERN, raw_str)
-
-        filename = None
-        if image_match:
-            f = Path(image_match.group(1))
-            filename = f"{f.stem}.webp"
-        elif video_match:
-            f = Path(video_match.group(1))
-            filename = f"{f.stem}.webm"
-
-        if filename:
-            if not raw_str.startswith(str(relative_attach_dir)):
-                post.metadata[property] = "/" + str((relative_attach_dir / filename).as_posix())
-
+        post.metadata[property] = normalize_value(post.metadata[property])
 
     return post
 
+
+def parse_captured_date(value):
+    """Parse a captured date from frontmatter into a datetime object."""
+    if isinstance(value, datetime):
+        return value
+    if isinstance(value, date):
+        return datetime.combine(value, datetime.min.time())
+    if not isinstance(value, str):
+        return None
+
+    text = value.strip()
+    if not text:
+        return None
+
+    for fmt in (
+        "%Y-%m-%d",
+        "%Y-%m-%d %H:%M",
+        "%Y-%m-%d %H:%M:%S",
+        "%Y/%m/%d",
+        "%Y/%m/%d %H:%M",
+        "%Y/%m/%d %H:%M:%S",
+    ):
+        try:
+            return datetime.strptime(text, fmt)
+        except ValueError:
+            continue
+
+    try:
+        return datetime.fromisoformat(text.replace("Z", "+00:00"))
+    except ValueError:
+        return None
+
+
+def apply_content_indices(group, imported_files):
+    """Add a year-based index prefix to the content of imported finds notes."""
+    if group["target_dir"].name != "finds":
+        return
+
+    items = []
+    for path in imported_files:
+        post = frontmatter.load(path)
+        captured = parse_captured_date(post.metadata.get("captured"))
+        if captured:
+            items.append((captured, path))
+
+    items.sort(key=lambda item: (item[0].year, item[0].month, item[0].day, item[0].hour, item[0].minute, item[0].second, str(item[1])))
+
+    counts_by_year = {}
+    for captured, path in items:
+        year = captured.year
+        count = counts_by_year.get(year, 0) + 1
+        counts_by_year[year] = count
+        prefix = f"[{str(year)[-2:]}.{count}]"
+
+        post = frontmatter.load(path)
+        content = (post.content or "").lstrip()
+        content = re.sub(r"^\[[0-9]{1,4}\.\d+\]\s*", "", content, count=1)
+        post.content = f"{prefix} {content}" if content else prefix
+
+        with open(path, "w", encoding="utf-8") as f:
+            f.write(frontmatter.dumps(post))
 
 
 def import_notes():
@@ -249,52 +346,55 @@ def import_notes():
     print(f"Cleaned target attachments directory: {ATTACHMENTS_TARGET_DIR}")
 
     for group in SOURCES:
-        src = group["source_dir"]
         dst_root = group["target_dir"]
-        
         if group["publish"]:
             dst_root.mkdir(parents=True, exist_ok=True)
             clean_target_dir(dst_root, ["_index.md"])
             print(f"Cleaned target content directory: {dst_root}")
 
-            for file in collect_md_files(src):
+            imported_files = []
+            for src in group["source_dirs"]:
+                for file in collect_md_files(src):
 
-                post = frontmatter.load(file)
-                
-                if post.metadata.get("publish", False):
-                    # Copy attached media files
-                    attachment_filenames = collect_attachment_filenames(post.metadata, post.content)
-                    find_and_copy_attachments(attachment_filenames)
+                    post = frontmatter.load(file)
 
-                    # Remove comments & convert links
-                    post.content = prepare_content(post.content)
-                    # Filter properties & convert links
-                    post = prepare_frontmatter(post, file)
+                    if post.metadata.get("publish", False):
+                        # Collect attachments from content with comments removed, but before changing filenames.
+                        attachment_filenames = collect_attachment_filenames(post.metadata, strip_comments(post.content))
+                        find_and_copy_attachments(attachment_filenames)
 
-                    # Gerenrate new file names from "title" property
-                    safe_title = post.metadata["title"].strip().lower()
-                    safe_title = unicodedata.normalize("NFKD", safe_title)
-                    safe_title = safe_title.replace(" ", "-")
-                    safe_title = re.sub(r"[^\w\-]", "", safe_title)
-                    target_file = dst_root / f"{safe_title}.md"
+                        # Remove comments and normalize content links for the exported note.
+                        post.content = prepare_content(post.content)
+                        # Filter properties & convert links
+                        post = prepare_frontmatter(post, file)
 
-                    # Set target file path based on whether subdirectories are included
-                    rel_path = file.relative_to(src)
-
-                    if group["include_subdirs"]:
-                        rel_path = file.relative_to(src)
-                        target_file = dst_root / rel_path.parent / f"{safe_title}.md"
-                    else:
+                        # Generate new file names from "title" property
+                        safe_title = post.metadata["title"].strip().lower()
+                        safe_title = unicodedata.normalize("NFKD", safe_title)
+                        safe_title = safe_title.replace(" ", "-")
+                        safe_title = re.sub(r"[^\w\-]", "", safe_title)
                         target_file = dst_root / f"{safe_title}.md"
 
-                    target_file.parent.mkdir(parents=True, exist_ok=True)
+                        # Set target file path based on whether subdirectories are included
+                        rel_path = file.relative_to(src)
 
-                    with open(target_file, "w", encoding="utf-8") as f:
-                        f.write(frontmatter.dumps(post))
+                        if group["include_subdirs"]:
+                            rel_path = file.relative_to(src)
+                            target_file = dst_root / rel_path.parent / f"{safe_title}.md"
+                        else:
+                            target_file = dst_root / f"{safe_title}.md"
 
-                    print(f"Imported: {file.relative_to(OBSIDIAN_ROOT)} → {target_file.relative_to(CONTENT_DIR)}")
-                else:
-                    print(f"Skipped (publish: false): {file.relative_to(OBSIDIAN_ROOT)}")
+                        target_file.parent.mkdir(parents=True, exist_ok=True)
+
+                        with open(target_file, "w", encoding="utf-8") as f:
+                            f.write(frontmatter.dumps(post))
+
+                        imported_files.append(target_file)
+                        print(f"Imported: {file.relative_to(OBSIDIAN_ROOT)} → {target_file.relative_to(CONTENT_DIR)}")
+                    else:
+                        print(f"Skipped (publish: false): {file.relative_to(OBSIDIAN_ROOT)}")
+
+            apply_content_indices(group, imported_files)
 
 
 if __name__ == "__main__":

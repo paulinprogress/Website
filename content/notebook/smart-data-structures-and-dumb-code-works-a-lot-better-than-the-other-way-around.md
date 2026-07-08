@@ -7,12 +7,11 @@ title: Smart data structures and dumb code works a lot better than the other way
 
 # Smart data structures and dumb code works a lot better than the other way around
 
-— eines von Eric Raymond’s Prinzipien zur [[Open Source]]-Entwicklung. Er zitiert Fred Brooks:
+Ein weiteres von Eric Raymond’s Prinzipien zur [[Open Source]]-Entwicklung. Er zitiert Fred Brooks:
 
 >“Show me your flowchart and conceal your tables, and I shall continue to be mystified. Show me your tables, and I won't usually need your flowchart; it'll be obvious.”
 
-Siehe: [[Software Development]], [[Game Development]]
-Bzw.: [[Programmierung]], [[Game Programmierung]]
+Siehe: [[Software Development]], [[Game Development]] (bzw.: [[Programmierung]], [[Game Programmierung]])
 
 ---
 

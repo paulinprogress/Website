@@ -23,13 +23,18 @@
 
     <div class="gallery">
 
-      {{ range sort .Pages ".File.BaseFileName" "desc" }}
+      {{ range sort .Pages ".Params.captured" "desc" }}
 
-        <article class="gallery-card" style="--count: {{ len .Params.images }}">
+        <article class="gallery-card"
+          style="--count: {{ if .Params.images }}{{ len .Params.images }}{{ else }}1{{ end }};">
 
           <div class="gallery-image-row">
-            {{ range .Params.images }}
-              <img src="{{ . }}" alt="">
+            {{ if .Params.images }}
+              {{ range .Params.images }}
+                <img src="{{ . }}" alt="">
+              {{ end }}
+            {{ else }}
+              <div class="gallery-wireframe"></div>
             {{ end }}
           </div>
 
