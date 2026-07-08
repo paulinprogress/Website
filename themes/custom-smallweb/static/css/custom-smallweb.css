@@ -543,7 +543,7 @@ pre code {
   }
   footer > div:first-of-type {
     border-bottom: 1px solid color-mix(in srgb, var(--text) 30%, transparent);
-    padding-bottom: 1lh;
+    padding-bottom: 2lh;
     margin-bottom: 0.4rem;
   }
 
