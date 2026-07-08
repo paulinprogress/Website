@@ -442,12 +442,12 @@ pre code {
 .gallery {
   display: flex;
   flex-wrap: wrap;
-  gap: 2.5rem;
+  gap: 1.5lh;
   align-items: flex-start;
 }
 .gallery-card {
   --image-width: 240px;
-  --image-gap: 0.6rem;
+  --image-gap: 0.5lh;
 
   width: calc(
     var(--count) * var(--image-width) +
@@ -569,9 +569,12 @@ pre code {
     grid-template-columns: 1fr 2fr;
   }
 
-  .sitemap {
-    border-top: 1px solid color-mix(in srgb, var(--text) 30%, transparent);
-    padding-top: 1lh;
+  .gallery-card {
+    --image-width: 150px;
+  }
+  .gallery-image-row {
+    max-width: 100vw;
+    flex-wrap: wrap;
   }
 }
 

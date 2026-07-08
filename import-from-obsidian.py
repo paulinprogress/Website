@@ -19,7 +19,7 @@ Imports markdown files from Obsidian notebook to Hugo-based website.
 """
 
 # Define directories
-OBSIDIAN_ROOT = Path("~/Repositories/Notebook").expanduser() # ~/Obsidian/Notebook # ~/Repositories/Notebook
+OBSIDIAN_ROOT = Path("~/Obsidian/Notebook").expanduser() # ~/Obsidian/Notebook # ~/Repositories/Notebook
 WEBSITE_ROOT  = Path("~/Repositories/Website").expanduser()
 
 CONTENT_DIR = WEBSITE_ROOT / "content"
@@ -44,17 +44,17 @@ SOURCES = [
         "include_subdirs": False,
     },
     {
-        # POSTS
-        "publish": False,
-        "source_dir": OBSIDIAN_ROOT / "projects" / "writing",
-        "target_dir": CONTENT_DIR / "posts",
+        # FRESH FINDS
+        "publish": True,
+        "source_dir": OBSIDIAN_ROOT / "fn" / "finds",
+        "target_dir": CONTENT_DIR / "finds",
         "include_subdirs": False,
     },
 ]
 
 # Define frontmatter properties/keys that should be imported; rest will be removed
 ALLOWED_KEYS = {"anchors", "created", "last updated", "year", "published", "date", "opened", "closed",
-                "publish", "title", "description", "image", "feature-image", "thumb-image", "project-type"}
+                "publish", "title", "description", "image", "images", "feature-image", "thumb-image", "project-type"}
 
 # Define media link patterns for handling attached media files
 IMAGE_LINK_PATTERN = re.compile(r'\[\[(.+?\.(?:webp|jpg|jpeg|png|svg))\]\]', re.IGNORECASE)
