@@ -19,13 +19,17 @@
         {{ partial "content-parsed.html" . }}
     {{ end }}
 
+    {{ with .OutputFormats.Get "RSS" }}
+      <a href="{{ .RelPermalink }}" class="rss-link">RSS feed</a>
+    {{ end }}
+
     <hr>
 
     <div class="gallery">
 
       {{ range sort .Pages ".Params.captured" "desc" }}
 
-        <article class="gallery-card"
+        <article class="gallery-card" id="{{ .File.ContentBaseName }}"
           style="--count: {{ if .Params.images }}{{ len .Params.images }}{{ else }}1{{ end }};">
 
           <div class="gallery-image-row">

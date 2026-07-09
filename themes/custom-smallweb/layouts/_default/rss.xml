@@ -1,0 +1,58 @@
+{{- printf "<?xml version=\"1.0\" encoding=\"utf-8\"?>" | safeHTML }}
+<rss version="2.0">
+<channel>
+  <title>{{ .Title }}</title>
+  <link>{{ .Permalink }}</link>
+  <description>{{ .Description }}</description>
+
+  {{ $items := slice }}
+
+  {{ range .Pages }}
+    {{ $date := now }}
+
+    {{ if eq .Section "notebook" }}
+      {{ $created := time .Params.created }}
+      {{ $updated := time (index .Params "last updated") }}
+
+      {{ $date = $created }}
+      {{ if and $updated (gt $updated $date) }}
+        {{ $date = $updated }}
+      {{ end }}
+    {{ else if eq .Section "gallery" }}
+      {{ $date = time .Params.captured }}
+    {{ end }}
+
+    {{ $items = $items | append (dict
+      "page" .
+      "date" $date
+    ) }}
+  {{ end }}
+
+  {{ range sort $items "date" "desc" }}
+    {{ $page := .page }}
+
+    <item>
+      <title>{{ $page.Title }}</title>
+      {{ if eq $page.Section "gallery" }}
+        <link>{{ site.BaseURL }}{{ $page.Section }}/#{{ $page.File.ContentBaseName }}</link>
+      {{ else }}
+        <link>{{ $page.Permalink }}</link>
+      {{ end }}
+      <pubDate>{{ .date.Format "02 Jan 2006" }}</pubDate>
+
+      <description>{{ printf "<![CDATA[" | safeHTML }}
+        {{ if eq $page.Section "gallery" }}
+          {{ range $page.Params.images }}
+            <img src="{{ . | absURL }}" width="240" />
+          {{ end }}
+          <br />
+        {{ end }}
+
+        {{ $page.Content | safeHTML }}
+
+      {{ printf "]]>" | safeHTML }}</description>
+    </item>
+  {{ end }}
+
+</channel>
+</rss>

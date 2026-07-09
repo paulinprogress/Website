@@ -21,6 +21,12 @@
         {{ partial "content-parsed.html" . }}
     {{ end }}
 
+    {{ if eq .Section "notebook" }}
+      {{ with .OutputFormats.Get "RSS" }}
+        <a href="{{ .RelPermalink }}" class="rss-link">RSS feed</a>
+      {{ end }}
+    {{ end }}
+
   </section>
 
   {{ partial "feed.html" . }}

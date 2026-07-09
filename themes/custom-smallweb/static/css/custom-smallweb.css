@@ -7,6 +7,7 @@
 
   --link-icon: url("/assets/icons/iconoir/arrow-up-right_blue.svg");
   --refs-icon: url("/assets/icons/iconoir/multiple-pages_black.svg");
+  --rss-icon: url("/assets/icons/iconoir/rss-feed_blue.svg");
 
   /* Font & text options */
   --font-size: 16px;
@@ -75,6 +76,7 @@ main {
   --link: #fff186;
   --link-icon: url("/assets/icons/iconoir/arrow-up-right_yellow.svg");
   --refs-icon: url("/assets/icons/iconoir/multiple-pages_white.svg");
+  --rss-icon: url("/assets/icons/iconoir/rss-feed_white.svg");
 }
 .green {
   --bg: #adf0c7;
@@ -82,6 +84,7 @@ main {
   --link: #0536b1;
   --link-icon: url("/assets/icons/iconoir/arrow-up-right_dark-blue.svg");
   --refs-icon: url("/assets/icons/iconoir/multiple-pages_dark-blue.svg");
+  --rss-icon: url("/assets/icons/iconoir/rss-feed_dark-blue.svg");
 }
 .pink {
   --bg: #dedaff;
@@ -89,6 +92,7 @@ main {
   --link: #0536b1;
   --link-icon: url("/assets/icons/iconoir/arrow-up-right_dark-blue.svg");
   --refs-icon: url("/assets/icons/iconoir/multiple-pages_dark-blue.svg");
+  --rss-icon: url("/assets/icons/iconoir/rss-feed_dark-blue.svg");
 }
 .black {
   --bg: #090a0c;
@@ -96,6 +100,7 @@ main {
   --link: #abc8ff;
   --link-icon: url("/assets/icons/iconoir/arrow-up-right_light-blue.svg");
   --refs-icon: url("/assets/icons/iconoir/multiple-pages_white.svg");
+  --rss-icon: url("/assets/icons/iconoir/rss-feed_light-blue.svg");
 }
 
 /* GENERAL ---------------------------------------------------------------------------------------------------------------------------- */
@@ -304,6 +309,20 @@ pre code {
   transform: translateY(3px) translateX(-2px);
 
   background-image: var(--refs-icon);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: left;
+}
+
+.rss-link::before {
+  content: "";
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+
+  transform: translateY(3px) translateX(-2px);
+
+  background-image: var(--rss-icon);
   background-repeat: no-repeat;
   background-size: contain;
   background-position: left;
@@ -621,5 +640,8 @@ pre code {
 
   a.external {
     background-size: 11px 11px;
+  }
+  .refs-icon::after {
+    background-size: 16px;
   }
 }
