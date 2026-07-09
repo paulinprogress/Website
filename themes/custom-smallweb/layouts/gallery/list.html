@@ -7,22 +7,45 @@
   </div>
 
   <div class="header-right">
+    {{ partial "links/link-email.html" }}
+    {{ partial "links/link-github.html" }}
   </div>
 
 </header>
 
-<div class="grid-layout-centered">
-
-  <section class="list-narrow">
+<section class="standalone-wide">
 
     {{ if .Content }}
         {{ partial "content-parsed.html" . }}
     {{ end }}
 
-  </section>
+    <hr>
 
-  <!--{{ partial "feed.html" . }}-->
+    <div class="gallery">
 
-</div>
+      {{ range sort .Pages ".Params.captured" "desc" }}
+
+        <article class="gallery-card"
+          style="--count: {{ if .Params.images }}{{ len .Params.images }}{{ else }}1{{ end }};">
+
+          <div class="gallery-image-row">
+            {{ if .Params.images }}
+              {{ range .Params.images }}
+                <img src="{{ . }}" alt="">
+              {{ end }}
+            {{ else }}
+              <div class="gallery-wireframe"></div>
+            {{ end }}
+          </div>
+
+          <div class="gallery-description">
+            {{ partial "content-parsed.html" . }}
+          </div>
+
+        </article>
+
+      {{ end }}
+
+</section>
 
 {{ end }}

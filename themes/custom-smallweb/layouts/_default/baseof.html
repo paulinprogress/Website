@@ -9,8 +9,21 @@
   
   <link rel="stylesheet" href="/css/shared.css" />
   <link rel="stylesheet" href="/css/custom-smallweb.css" />
+
+  {{ partial "latex-parser.html" . }}
 </head>
-<body>
+
+{{ $color := "" }}
+
+{{ if eq .Section "gallery" }}
+  {{ $color = "pink" }}
+{{ else if eq .RelPermalink "/canon/" }}
+  {{ $color = "pink" }}
+{{ else if eq .RelPermalink "/colophon/" }}
+  {{ $color = "green" }}
+{{ end }}
+
+<body class="{{ $color }}">
 
   <main class="page">
     {{ block "main" . }}
@@ -18,6 +31,7 @@
     {{ end }}
   </main>
 
-  {{ partial "footer.html" }}
+  {{ partial "footer.html" . }}
+
 </body>
 </html>

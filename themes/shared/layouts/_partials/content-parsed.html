@@ -68,8 +68,8 @@
 <!-- Fix spaces between links and opening paranthesis directly before -->
 {{ $out = replaceRE `\(\s+<a` "(<a" $out }}
 
-<!-- Swap custom arrow icon -->
-{{ $icon := `<img class="arrow-icon" src="/assets/icons/iconoir/multiple-pages.svg"></svg>` }}
+<!-- Swap sources/references icon in notebook -->
+{{ $icon := `<span class="refs-icon"></span>` }}
 {{ $out = replace $out "↩" $icon }}
 
 {{ $out | safeHTML }}
