@@ -4,7 +4,7 @@ title: 'paulhofmann.dev'
 languageCode: 'en-us'
 
 # Output/publish directory
-publishDir: "public" # Needs to be "docs" when using GitHub Pages publish from branch
+publishDir: "public" # Needs to be "docs" when using GitHub Pages "publish from branch"
 
 # Markdown configuration
 markup:
@@ -16,41 +16,17 @@ markup:
       xhtml: false
       parser:
         autoHeadingID: true
+    extensions: # LaTeX line-break fix
+      passthrough:
+        enable: true
+        delimiters:
+          block:
+            - ["$$", "$$"]
+          inline:
+            - ["$", "$"]
   tableOfContents:
     startLevel: 2
     endLevel: 4
 
 # Theme configuration
 theme: ['custom-smallweb', 'shared']
-
-#params:
-#  navbar:
-#    displayTitle: false
-#    displayLogo: false
-#  theme: # light | dark | system
-#    default: system
-#    displayToggle: false
-
-#menu:
-#  main:
-#    - name: About me
-#      pageRef: /about-me
-#      weight: 1
-#    - name: Portfolio
-#      pageRef: /portfolio
-#      weight: 2
-#    - name: Notes
-#      pageRef: /notes
-#      weight: 3
-#    - name: Posts
-#      pageRef: /blog
-#      weight: 4
-#    - name: Search
-#      weight: 5
-#      params:
-#        type: search
-#    - name: GitHub
-#      weight: 6
-#      url: "https://github.com/paulinprogress/Portfolio-Website"
-#      params:
-#        icon: github

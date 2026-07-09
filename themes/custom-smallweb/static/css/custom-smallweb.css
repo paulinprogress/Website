@@ -286,6 +286,13 @@ pre code {
   font-size: 14px;
 }
 
+.page .katex {
+  font-size: 1rem;
+}
+.page .katex-display {
+  font-size: 1rem;
+}
+
 /* CUSTOM ELEMENTS -------------------------------------------------------------------------------------------------------------------- */
 
 .refs-icon::after {
