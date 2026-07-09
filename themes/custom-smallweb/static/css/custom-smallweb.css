@@ -557,6 +557,7 @@ pre code {
     flex-direction: row !important;
     top: 0;
     padding: 0;
+    margin-bottom: 1.5rem;
   }
 
   footer {
@@ -569,14 +570,14 @@ pre code {
   }
 
   .list-narrow {
-    margin-top: 1lh;
+    margin-top: 0;
   }
   .single-narrow {
     padding: 0;
-    margin-top: 1lh;
+    margin-top: 0;
   }
   .standalone-wide {
-    margin-top: 1lh;
+    margin-top: 0;
   }
 
   .portfolio-grid-big {

@@ -1,7 +1,11 @@
 ---
-layout: standalone-narrow
+layout: standalone-wide
 ---
-This is a [slashpage](https://slashpages.net/#canon) I wanted to implement; “an encapsulation, in list form, of those things that have most shaped you. A sort of annotated bibliography of influences.” *(You can also check out the [gallery]({{< ref "gallery" >}}) page for more recent pieces of inspiration.)*
+# Canon
+
+A simple [slashpage](https://slashpages.net/#canon) I wanted to implement; “an encapsulation, in list form, of those things that have most shaped you. A sort of annotated bibliography of influences.”
+
+*(You can also check out the [gallery]({{< ref "gallery" >}}) page for more recent pieces of inspiration.)*
 
 ---
 
