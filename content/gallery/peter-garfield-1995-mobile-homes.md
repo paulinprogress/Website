@@ -4,9 +4,9 @@ anchors:
 - '[[Surrealismus]]'
 captured: 2024-05-27
 images:
-- http://www.petergarfield.net/images/mobile_homes/MH_Split_Level_lg.jpg
-- http://www.petergarfield.net/images/mobile_homes/MH-ManifestDestiny_lg.jpg
-- http://www.petergarfield.net/images/mobile_homes/MH_Dusk_lg.jpg
+- /attachments/(Peter Garfield, 1995) Mobile Homes (3).webp
+- /attachments/(Peter Garfield, 1995) Mobile Homes (2).webp
+- /attachments/(Peter Garfield, 1995) Mobile Homes (1).webp
 publish: true
 title: (Peter Garfield, 1995) Mobile Homes
 ---
