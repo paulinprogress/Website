@@ -2,7 +2,7 @@
 anchors:
 - '[[Machine Learning]]'
 - '[[Deep Learning]]'
-- '[[Generative Modelle]]'
+- '[[Generative KI]]'
 - '[[Synthetische Daten]]'
 - '[[Contrastive Learning]]'
 closed: 2024-12-02
