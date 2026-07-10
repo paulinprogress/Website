@@ -29,4 +29,4 @@ markup:
     endLevel: 4
 
 # Theme configuration
-theme: ['custom-smallweb', 'shared']
+theme: ['indieweb', 'shared']
