@@ -1,0 +1,45 @@
+{{ $size := .Get "size" | default "big" }}
+{{ $selected := .Get "selected" | default "" }}
+{{ $type := .Get "type" | default "game, game-design" }}
+{{ $limit := .Get "limit" | default 9999 }}
+
+{{ $pages := where site.RegularPages "Section" "portfolio" }}
+{{ $filtered := $pages }}
+
+{{ if $selected }}
+    {{ $selectedList := slice }}
+    {{ range (split $selected ",") }}
+        {{ $selectedList = $selectedList | append (strings.TrimSpace .) }}
+    {{ end }}
+
+    {{ $filtered = where $pages "Title" "in" $selectedList }}
+{{ else }}
+    {{ with $type }}
+        {{ $typeList := split (replace . " " "") "," }}
+        {{ $filtered = where $pages "Params.project-type" "intersect" $typeList }}
+        {{ $filtered = sort $filtered "Params.opened" "desc" }}
+    {{ end }}
+{{ end }}
+
+<div class="portfolio-grid-{{ $size }}">
+{{ range first $limit $filtered }}
+
+    {{ $image := "" }}
+    {{ if index .Params "feature-image" }}
+        {{ $image = index .Params "feature-image" }}
+    {{ else if .Params.image }}
+        {{ $image = .Params.image }}
+    {{ else }}
+        {{ $image = "/images/test/test.jpg" }}
+    {{ end }}
+
+    <div class="portfolio-item-big">
+        <a href="{{ .RelPermalink }}">
+        <div class="thumb">
+            <img src="{{ $image }}" alt="{{ .Title }}">
+        </div>
+        </a>
+    </div>
+
+{{ end }}
+</div>

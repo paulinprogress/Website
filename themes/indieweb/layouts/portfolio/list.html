@@ -20,71 +20,8 @@
 <section class="portfolio">
   
   <div class="grid-layout-biased">
-    <div class="portfolio-intro">
-      {{ partial "content-parsed.html" . }}
-    </div>
+    {{ partial "content-parsed.html" . }}
   </div>
-
-  {{ $pages := where site.RegularPages "Section" "portfolio" }}
-
-  <div class="portfolio-grid-big">
-  {{ $selected := slice "Internal Review" "JetQuest" }}
-  {{ $filtered := where $pages ".Params.title" "in" $selected }}
-
-  {{ range $filtered }}
-
-    {{ $image := "" }}
-    {{ if index .Params "feature-image" }}
-      {{ $image = index .Params "feature-image" }}
-    {{ else if .Params.image }}
-      {{ $image = .Params.image }}
-    {{ else }}
-      {{ $image = "/images/test/test.jpg" }}
-    {{ end }}
-
-    <div class="portfolio-item-big">
-      <a href="{{ .RelPermalink }}">
-        <div class="thumb">
-          <img src="{{ $image }}" alt="{{ .Title }}">
-        </div>
-      </a>
-    </div>
-
-  {{ end }}
-  </div>
-
-  <div class="portfolio-grid-small">
-  {{ $selected := slice "Last Block Standing" "Flat Frenzy" "Minor Illusion" }}
-  {{ $filtered := where $pages ".Params.title" "in" $selected }}
-
-  {{ range $filtered }}
-
-    {{ $image := "" }}
-    {{ if index .Params "feature-image" }}
-      {{ $image = index .Params "feature-image" }}
-    {{ else if .Params.image }}
-      {{ $image = .Params.image }}
-    {{ else }}
-      {{ $image = "/images/test/test.jpg" }}
-    {{ end }}
-
-    <div class="portfolio-item-small">
-      <a href="{{ .RelPermalink }}">
-        <div class="thumb">
-          <img src="{{ $image }}" alt="{{ .Title }}">
-        </div>
-      </a>
-    </div>
-
-  {{ end }}
-  </div>
-
-  <!--<div class="portfolio-links">
-    {{ partial "links/link-github.html" }}
-    {{ partial "links/link-itch.html" }}
-    {{ partial "links/link-yt-paulinprogress.html" }}
-    {{ partial "links/link-twitter-ghostsnglitter.html" }}
-  </div>-->
 
 </section>
 

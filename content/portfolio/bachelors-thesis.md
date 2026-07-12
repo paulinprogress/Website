@@ -24,7 +24,7 @@ My 2024 bachelor’s thesis in Media Technology: *“Contrastive Learning with S
 
 I’ll have to explain a little bit…
 
-During my Media Technology studies, I discovered an interest in machine learning after taking an introductory course. I enjoyed how quickly we could get hands-on experience; in one project, two classmates and I built a web app that connected to Spotify and let you control it with hand gestures via your webcam (see: [[(2021~2022) SpotifAI|SpotifAI]]).
+During my Media Technology studies, I discovered an interest in machine learning after taking an introductory course. I enjoyed how quickly we could get hands-on experience; in one project, two classmates and I built a web app that connected to Spotify and let you control it with hand gestures via your webcam (see: [SpotifAI]({{< ref "portfolio/spotifai" >}})).
 
 So when the time came to do my student internship, I landed a spot at Berlin’s [Fraunhofer Institute for Production Systems and Design Technology](https://www.ipk.fraunhofer.de/en.html), working on a computer vision research project for the recycling industry. The goal was to improve a classier for identifying used parts. Specifically, my job was to explore different methods for *synthetic data generation using generative AI* – i.e. generating new images to be used for training the classifier, in order to increase data variety, especially for different object conditions, wear & tear, etc.
 

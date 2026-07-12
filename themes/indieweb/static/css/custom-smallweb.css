@@ -402,16 +402,32 @@ pre code {
 
 /* PORTFOLIO -------------------------------------------------------------------------------------------------------------------------- */
 
-/* Intro */
-.portfolio-intro {
+.portfolio p {
   grid-column: 2;
-  margin-bottom: 2rem;
+  margin: 0; /* Reset default p margin */
 }
 
-/* Grid */
+/* Margin between paragraphs */
+.portfolio p + p {
+  margin-top: 1lh;
+}
+/* Text before a grid */
+.portfolio p + [class^="portfolio-grid"] {
+  margin-top: 2rem;
+}
+/* Text after a grid */
+.portfolio [class^="portfolio-grid"] + p {
+  margin-top: 2rem;
+}
+/* Consecutive grids */
+.portfolio [class^="portfolio-grid"] + [class^="portfolio-grid"] {
+  margin-top: 2rem;
+}
+
+/* Grids */
 .portfolio-grid-big,
 .portfolio-grid-small {
-  grid-column: 1;
+  grid-column: 1 / -1;
   display: grid;
   gap: 2rem;
   max-width: 100%;
@@ -419,11 +435,9 @@ pre code {
 }
 .portfolio-grid-big {
   grid-template-columns: repeat(2, minmax(0, 1fr));
-  margin-bottom: 2rem;
 }
 .portfolio-grid-small {
   grid-template-columns: repeat(3, minmax(0, 1fr));
-  margin-top: 2rem;
 }
 .portfolio-item-big,
 .portfolio-item-small {
@@ -444,18 +458,7 @@ pre code {
   aspect-ratio: 630 / 500;
 }
 
-/* Bottom/links */
-.portfolio-links {
-  display: flex;
-  flex-direction: row;
-  margin-top: 2lh;
-  margin-bottom: 1lh;
-}
-.portfolio-links > a {
-  margin-right: 2rem;
-}
-
-/* FINDS */
+/* GALLERY ---------------------------------------------------------------------------------------------------------------------------- */
 
 .gallery {
   display: flex;
@@ -644,4 +647,19 @@ pre code {
   .refs-icon::after {
     background-size: 16px;
   }
+
+  .portfolio-grid-big,
+  .portfolio-grid-small {
+    gap: 1rem;
+  }
+  .portfolio p + [class^="portfolio-grid"] {
+    margin-top: 1.5rem;
+  }
+  .portfolio [class^="portfolio-grid"] + p {
+    margin-top: 1.5rem;
+  }
+  .portfolio [class^="portfolio-grid"] + [class^="portfolio-grid"] {
+    margin-top: 1.5rem;
+  }
+  
 }
