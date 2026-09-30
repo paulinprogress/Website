@@ -19,9 +19,9 @@ Entwickelt von [[Niklas Luhmann]], um ihm in seiner akademischen [[Wissenschaft|
 Im [[Internet]] findet man viel Vages und Widersprüchliches, daher hier eine kurze Übersicht. Der Zettelkasten ist *kein universelles Organisationstool für Informationen*, sondern im Wesentlichen als *Methode zum [[Lernen]]* und Verarbeiten von neuem Wissen zu verstehen, die ein einfaches, aber mächtiges System zum Notizenschreiben nutzt.
 
 - Grundlegendes:
-	- Prinzip: [[Link knowledge, not notes]]
 	- Atomare Notizen:
 		- [[Notizen im Zettelkasten repräsentieren atomare Ideen]]
+		- Nach dem Prinzip: [[Link knowledge, not notes]]
 	- Kontext-Unabhängigkeit:
 		- [[Einträge im Zettelkasten sollten kontextunabhängig sein]]
 	- Assoziationen:
@@ -54,7 +54,6 @@ Im [[Internet]] findet man viel Vages und Widersprüchliches, daher hier eine ku
 		- [[Knowledge-Flower]]
 		- [[Zettelkasten as Gardening]]
 	- Sonstiges:
-		- [[Wartung des Zettelkastens]]
 		- [[Hypertext als Blueprint für kreative Projekte]]
 - Andere Systeme: (Siehe: [[Personal Knowledge Management]])
 	- [[Digital Garden]]: Ein Zettelkasten kann theoretisch als Digital Garden gesehen werden – letzterer ist aber eher messy/WIP, nicht wirklich atomar, und beinhaltet (kreativen) Output und blogartige Beiträge

@@ -9,4 +9,4 @@ publish: true
 title: (Sonia, 1980) Easier To Love
 ---
 
-[25.3] [Sonia - Easier To Love (1980)](https://youtu.be/SsWOb131gxo?si=AGtTRAs7td7Cnpax).
+[25.1] [Sonia - Easier To Love (1980)](https://youtu.be/SsWOb131gxo?si=AGtTRAs7td7Cnpax).

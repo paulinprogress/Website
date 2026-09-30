@@ -24,9 +24,9 @@ My 2024 bachelor’s thesis in Media Technology: *“Contrastive Learning with S
 
 I’ll have to explain a little bit…
 
-During my Media Technology studies, I discovered an interest in machine learning after taking an introductory course. I enjoyed how quickly we could get hands-on experience; in one project, two classmates and I built a web app that connected to Spotify and let you control it with hand gestures via your webcam (see: [SpotifAI]({{< ref "portfolio/spotifai" >}})).
+During my Media Technology studies, I discovered an interest in [[machine learning]] after taking an introductory course. I enjoyed how quickly we could get hands-on experience; in one project, two classmates and I built a web app that connected to Spotify and let you control it with hand gestures via your webcam (see: [SpotifAI]({{< ref "portfolio/spotifai" >}})).
 
-So when the time came to do my student internship, I landed a spot at Berlin’s [Fraunhofer Institute for Production Systems and Design Technology](https://www.ipk.fraunhofer.de/en.html), working on a computer vision research project for the recycling industry. The goal was to improve a classier for identifying used parts. Specifically, my job was to explore different methods for *synthetic data generation using generative AI* – i.e. generating new images to be used for training the classifier, in order to increase data variety, especially for different object conditions, wear & tear, etc.
+So when the time came to do my student internship, I landed a spot at Berlin’s [Fraunhofer Institute for Production Systems and Design Technology](https://www.ipk.fraunhofer.de/en.html), working on a [[Computer Vision|computer vision]] research project for the recycling industry. The goal was to improve a classier for identifying used parts. Specifically, my job was to explore different methods for *[[Synthetische Daten|synthetic data]] generation using [[Generative KI|generative AI]]* – i.e. generating new images to be used for training the classifier, in order to increase data variety, especially for different object conditions, wear & tear, etc.
 
 The internship was super fun and I made some decent progress, but took away a key learning: It’s *really* hard to generate realistic images – let alone with meaningful variations – of such detailed objects, with such fine-grained classes, and with such limited examples per class.
 
@@ -36,8 +36,8 @@ Using the text-to-image personalization framework [Perfusion](https://research.n
 
 Despite the challenges – or maybe because of them – it only made sense to write my bachelor’s thesis on the same project. After lots of further research, two topics stood out to me as particularly promising for the given use case:
 
-1. **DA-Fusion:** A Stable Diffusion-based method for data augmentation, which takes images of your new object classes and automatically generates semantically meaningful variations of it – all without having to fine-tune the actual diffusion model with tons of new examples per class (instead, it fine-tunes a *token* that describes your new class, leveraging all the existing knowledge of the pre-trained model).
-2. **Contrastive Learning:** A method for learning representations of input data, so that similar samples are close together in the representation space and dissimilar examples further apart. This was interesting, because it learns by comparing “positive” and “negative” examples, which gave me an idea: Can I use *sub-optimal* synthetic data *only* as negative examples and thereby increase model performance after all?
+1. **[[DA-Fusion]]:** A [[Stable Diffusion]]-based method for [[Datenaugmentation|data augmentation]], which takes images of your new object classes and automatically generates semantically meaningful variations of it – all without having to fine-tune the actual diffusion model with tons of new examples per class (instead, it fine-tunes a *token* that describes your new class, leveraging all the existing knowledge of the pre-trained model).
+2. **[[Contrastive Learning]]:** A method for learning representations of input data, so that similar samples are close together in the representation space and dissimilar examples further apart. This was interesting, because it learns by comparing “positive” and “negative” examples, which gave me an idea: Can I use *sub-optimal* synthetic data *only* as negative examples and thereby increase model performance after all?
 
 This led to an experiment in which I trained a Supervised Contrastive Learning classifier and compared it’s accuracy as well as out-of-distribution detection across three different training setups:
 
@@ -63,6 +63,6 @@ And here some of the *far out-of-distribution* augmentations, which clearly turn
 
 ![[(2024, BA) Beispiele für mangelhafte Out-of-Distribution-Augmentationen (2).webp]]
 
-Either way, the project taught me a *ton* about practical ML implementation (especially since I had to re-engineer the contrastive loss function), as well as research methodology and data analysis.
+Either way, the project taught me a *lot* about practical ML implementation (especially since I had to re-engineer the contrastive loss function), as well as research methodology and data analysis.
 
 For implementation details, the code is available on [GitHub](https://github.com/paulinprogress/BA-Synthetic-Data).

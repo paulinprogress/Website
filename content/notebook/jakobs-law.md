@@ -11,7 +11,7 @@ Nutzer erwarten, dass neue [[Systeme]] sich wie bekannte Systeme verhalten.
 
 Es lohnt sich deshalb oft als, sich an gängige [[Design]]-Konventionen zu halten, um die (unterbewussten) Erwartungen der Nutzer/Spieler zu berücksichtigen und Frustration zu vermeiden.
 
-Siehe: [[UI Design]], [[UX Design]], [[Web Design]], [[Game Design]]
+Siehe: [[UX Design]], [[UI Design]], [[Web Design]], [[Game Design]], …
 
 ---
 

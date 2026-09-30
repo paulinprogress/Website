@@ -9,7 +9,7 @@ title: Dependency Injection
 
 Siehe: [[Objektorientierte Programmierung]]
 
-Ein simples aber wichtiges [[Programmierung|Programmier]]-Pattern, bei dem Objekte oder Funktionen andere Objekte/Funktionen von außen bereitgestellt bekommen, anstatt sie intern selbst zu erzeugen:
+Simples aber wichtiges [[Programmierung|Programmier]]-Pattern, bei dem Objekte oder Funktionen andere Objekte/Funktionen von außen bereitgestellt bekommen, anstatt sie intern selbst zu erzeugen:
 
 ```TypeScript
 // OHNE Dependency Injection: Database wird intern erstellt

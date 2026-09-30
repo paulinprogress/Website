@@ -9,4 +9,4 @@ publish: true
 title: (Iman, 2006) Who Was I Trying to Fool
 ---
 
-[24.7] [Iman - Who Was I Trying to Fool (2006)](https://youtu.be/9Xz0XLHjZJ0?si=HTgP4Fcja38y9wxO).
+[24.6] [Iman - Who Was I Trying to Fool (2006)](https://youtu.be/9Xz0XLHjZJ0?si=HTgP4Fcja38y9wxO).

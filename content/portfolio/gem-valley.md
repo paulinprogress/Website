@@ -1,10 +1,10 @@
 ---
 anchors:
 - '[[Game Development]]'
-- '[[Game Programmierung]]'
-- '[[Prototyping]]'
 - '[[Game Design]]'
 - '[[Level Design]]'
+- '[[Game Programmierung]]'
+- '[[Prototyping]]'
 - '[[Unity]]'
 closed: 2025-03-29
 description: 2D platformer from my course in indie games development
