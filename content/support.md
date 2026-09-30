@@ -1,5 +1,8 @@
 ---
 layout: standalone-narrow
+build:
+    list: never
+    render: never
 ---
 I'm still setting up a lot of stuff, but if you already want to support me or give a small tip, for whatever reason, here's my Ko-fi link!
 
