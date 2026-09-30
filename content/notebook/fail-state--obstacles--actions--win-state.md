@@ -1,6 +1,6 @@
 ---
 created: 2025-05-04
-last updated: ''
+last updated: null
 publish: true
 title: Fail State ← Obstacles – Actions → Win State
 ---

@@ -1,6 +1,6 @@
 ---
 created: 2025-04-18
-last updated: ''
+last updated: null
 publish: true
 title: PS1 Ästhetik
 ---

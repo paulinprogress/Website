@@ -1,6 +1,18 @@
 {{- $content := .Content -}}
 {{- $out := $content -}}
 
+<!-- YouTube embeds -->
+{{ $youtubePattern := `<img src="https?://(?:www\.)?youtube\.com/watch\?v=([A-Za-z0-9_-]{11})(?:[^"]*)"[^>]*>|<img src="https?://youtu\.be/([A-Za-z0-9_-]{11})(?:\?[^"]*)?"[^>]*>` }}
+
+{{ range findRE $youtubePattern $out }}
+  {{ $match := . }}
+  {{ $id := replaceRE $youtubePattern "$1$2" $match }}
+
+  {{ $replacement := printf `<div class="youtube"><iframe src="https://www.youtube.com/embed/%s" title="YouTube video" loading="lazy" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>` $id }}
+
+  {{ $out = replace $out $match $replacement }}
+{{ end }}
+
 <!-- Image Wikilinks -->
 {{ range partial "extract-wikilinks.html" (dict
     "content" $out
