@@ -5,7 +5,7 @@ layout: standalone-wide
 
 A simple [slashpage](https://slashpages.net/#canon) I wanted to implement; “an encapsulation, in list form, of those things that have most shaped you. A sort of annotated bibliography of influences.”
 
-*(You can also check out the [gallery]({{< ref "gallery" >}}) page for more recent pieces of inspiration.)*
+*(You can also check out my [gallery]({{< ref "gallery" >}}) page for more recent pieces of inspiration.)*
 
 ---
 
@@ -34,27 +34,26 @@ Going back to teen years, these works are less about style or feeling and more a
 
 - Nickelodeon - Avatar: The Last Airbender (2005-2008)
 - Steven Spielberg - Jurassic Park (1993)
-- Ubisoft - Rainbow Six: Siege (2015); oh the early days...
+- Ubisoft - Rainbow Six: Siege (2015)
 - Nic Pizzolatto - True Detective (2014)
-- Bungie - Destiny 2 (2017); honestly just a pretty flat looter shooter I used to play in the evenings while watching youtube videos, but I was always super amazed by the art direction
+- Bungie - Destiny 2 (2017)
 - Vince Gilligan - Breaking Bad (2008-2013)
 - Ludeon Studios - Rimworld (2013)
 - …
 
-Music is another huge part of my life, so here some particularly impactful finds, in more or less no particular order:
+Music is another huge part of my life, so here some particularly important finds, in no particular order:
 
-- Vegyn (as well as a clear inspiration of his, Aphex Twin)
+- Vegyn (also Aphex Twin, who he was clearly inspired by)
+- Sweet Trip
+- The Sundays
 - Deaton Chris Anthony
 - Toro Y Moi
 - Mk.gee
 - Lewis OfMan
-- Sweet Trip
-- The Sundays
 - Salami Rose Joe Louis
 - Slauson Malone / Standing On The Corner
 - Liv.e
 - KAYTRANADA
-- Donald Glover / Childish Gambino
 - Otto Benson / OTTO / Memo Boy
 - Windows 96 / Gabriel Eduardo
 - Oneothrix Point Never
