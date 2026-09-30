@@ -592,6 +592,26 @@ pre code {
     flex-direction: column;
   }
 
+  .home-image-row {
+    position: relative;
+    display: block;
+    height: 360px;
+    overflow: hidden;
+  }
+  .home-image-row img {
+    position: absolute;
+    top: 0;
+    display: block;
+    width: auto;
+    height: auto;
+    max-width: none;
+    opacity: 0;
+    transition: opacity 0s ease;
+  }
+  .home-image-row img.active {
+    opacity: 1;
+  }
+
   header {
     position: relative;
     flex-direction: row !important;
@@ -653,10 +673,6 @@ pre code {
   }
   footer > div:last-child {
     font-size: 11px;
-  }
-
-  .home-image-row > img:not(:first-of-type) {
-    display: none;
   }
 
   a.external {
