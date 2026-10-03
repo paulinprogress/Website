@@ -10,4 +10,4 @@ publish: true
 title: (De Wolfe Music, 2003) Barbie Beauty Boutique (OST)
 ---
 
-[24.2] [De Wolfe Music - Barbie Beauty Boutique OST (2003)](https://youtu.be/EDwBYG39-q0?si=D4IgHOzPDbeU7Xd2).
+[24.1] [De Wolfe Music - Barbie Beauty Boutique OST (2003)](https://youtu.be/EDwBYG39-q0?si=D4IgHOzPDbeU7Xd2). Top 5 video game soundtracks of all time.

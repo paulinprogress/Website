@@ -1,6 +1,4 @@
 document.addEventListener("DOMContentLoaded", () => {
-    if (window.innerWidth > 1200) return;
-
     const row = document.querySelector(".home-image-row");
     if (!row) return;
 
@@ -8,12 +6,40 @@ document.addEventListener("DOMContentLoaded", () => {
     if (!images.length) return;
 
     let current = 0;
+    let interval = null;
 
-    images[current].classList.add("active");
+    const isMobile = () => window.innerWidth <= 600;
 
-    setInterval(() => {
-        images[current].classList.remove("active");
-        current = (current + 1) % images.length;
+    const start = () => {
+        if (interval || !isMobile()) return;
+
         images[current].classList.add("active");
-    }, 2000);
+
+        interval = setInterval(() => {
+            images[current].classList.remove("active");
+            current = (current + 1) % images.length;
+            images[current].classList.add("active");
+        }, 2000);
+    };
+
+    const stop = () => {
+        if (!interval) return;
+
+        clearInterval(interval);
+        interval = null;
+
+        images.forEach(img => img.classList.remove("active"));
+        current = 0;
+    };
+
+    const update = () => {
+        if (isMobile()) {
+            start();
+        } else {
+            stop();
+        }
+    };
+
+    update();
+    window.addEventListener("resize", update);
 });

@@ -7,7 +7,7 @@ title: Zettelkasten
 
 # Zettelkasten
 
-Ein System aus vielen verschiedenen Zetteln bzw. Karteikarten, welche jeweils genau eine Idee, einen Gedanken, oder ein Konzept repräsentieren. Jede Karte hat eine einmalige ID, welche von jeder anderen Karte referenziert werden kann, um direkte Assoziationen und Verbindungen (Links) zwischen Ideen festzuhalten. Es ergibt sich ein komplexes [[Netzwerke|Netzwerk]] von Wissen, welches unserem eigenen Verstand ähnelt.
+Ein System aus vielen verschiedenen Zetteln bzw. Karteikarten, welche jeweils genau eine Idee, einen Gedanken, oder ein Konzept repräsentieren. Jede Karte hat eine einmalige ID, welche von jeder anderen Karte referenziert werden kann, um direkte Assoziationen und Verbindungen (Links) zwischen Ideen festzuhalten. Es ergibt sich ein komplexes [[Informationstechnik & Infrastruktur|Netzwerk]] von Wissen, welches unserem eigenen Verstand ähnelt.
 
 Entwickelt von [[Niklas Luhmann]], um ihm in seiner akademischen [[Wissenschaft|Forschung]] zu helfen:
 

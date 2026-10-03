@@ -68,6 +68,7 @@ Einzelne Modell-Architekturen:
 ---
 
 - ↩
+	- (Alexander Jung, 2022) Machine Learning - The Basics ([Weblink](https://link.springer.com/book/10.1007/978-981-16-8193-6))
 	- [[(Goodfellow et al., 2016) Deep Learning]] ([Weblink](https://www.deeplearningbook.org/))
 	- [[(Zhi-Hua Zhou, 2021) Machine Learning]]
 	- [[(Tom M. Mitchell, 1997) Machine Learning]]

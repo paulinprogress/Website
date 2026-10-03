@@ -26,7 +26,7 @@ This was a collaboration with [Justin Gonsalves](https://justingonsalves.itch.io
 
 We opted for a fun, arcady flying game with a retro look, focused on risky, mobility-driven challenges set in a canyon environment. You complete challenges to earn points and unlock new spaceships. Along the way, you can collect pickups for bonus points or fuel, but you must land before running out of fuel in order to stash your points, select new challenges, or upgrade your ship.
 
-![[(2025) JetQuest (Challenge Selection).webm]]
+!![[(2025) JetQuest (Challenge Selection).webm]]
 
 After we settled on the general idea early on, we began by adopting a simple airplane controller, scripting the challenge system and building the level. In particular, I got familiar with the Unity’s Terrain tool, as well as Scriptable Objects for neatly organizing and handling the data for different ships and challenges.
 
@@ -41,6 +41,6 @@ Once many of the individual elements for the game were prototyped, I became deep
 
 Our entry landed the 1st spot in theme implementation and 6th overall, making it a pretty rewarding outcome for us! Following some of the feedback we got, I also experimented with an option to lock the camera, although I find it a bit nauseating… (see below)
 
-![[(2025) JetQuest (Mouse Lock).webm]]
+!![[(2025) JetQuest (Mouse Lock).webm]]
 
 You can play JetQuest on [Itch.io](https://paultoast.itch.io/jetquest).

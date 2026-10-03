@@ -31,8 +31,8 @@ Despite being familiar with Unity before, it deepened my understanding of many c
 - Audio & music implementation, including randomized footstep sounds
 - Menus & other basic UI elements
 
-![[(2025, NFTS) Gem Valley (Intro).webm]]
+!![[(2025, NFTS) Gem Valley (Intro).webm]]
 
-![[(2025, NFTS) Gem Valley (Demo).webm]]
+!![[(2025, NFTS) Gem Valley (Demo).webm]]
 
 [Play on Itch.io](https://paultoast.itch.io/gem-valley)

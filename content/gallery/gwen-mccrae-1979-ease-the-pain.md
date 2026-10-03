@@ -10,4 +10,4 @@ publish: true
 title: (Gwen McCrae, 1979) Ease the Pain
 ---
 
-[26.4] [Gwen McCrae - Ease the Pain (1979)](https://www.youtube.com/watch?v=zBNn1z1W5xA). Just… perfect.
+[26.4] [Gwen McCrae - Ease the Pain (1979)](https://www.youtube.com/watch?v=zBNn1z1W5xA).

@@ -10,4 +10,4 @@ publish: true
 title: (Gordon Brander, 2022) All you need is links
 ---
 
-[24.7] [Gordon Brander - All you need is links (2022)](https://newsletter.squishy.computer/p/all-you-need-is-links)
+[24.6] [Gordon Brander - All you need is links (2022)](https://newsletter.squishy.computer/p/all-you-need-is-links)

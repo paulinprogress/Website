@@ -62,7 +62,8 @@ ALLOWED_KEYS = { "publish", "title", "description", "feature-image", "thumb-imag
                  "anchors", "created", "last updated", "captured", "year", "date", "opened", "closed", "image", "images", }
 
 # Define media link patterns for handling attached media files
-IMAGE_LINK_PATTERN = re.compile(r'\[\[(.+?\.(?:webp|jpg|jpeg|png|svg))\]\]', re.IGNORECASE)
+IMAGE_LINK_PATTERN = re.compile(r'!\[\[([^|\]]+\.(?:webp|jpg|jpeg|png|svg))(\|[^\]]+)?\]\]', re.IGNORECASE)
+FRONTMATTER_IMAGE_LINK_PATTERN = re.compile(r'\[\[([^|\]]+\.(?:webp|jpg|jpeg|png|svg))\]\]', re.IGNORECASE)
 VIDEO_LINK_PATTERN = re.compile(r'\[\[(.+?\.(?:webm|mp4|gif))\]\]', re.IGNORECASE)
 PDF_LINK_PATTERN = re.compile(r'\[\[(.+?\.(?:pdf))\]\]', re.IGNORECASE)
 
@@ -119,8 +120,9 @@ def collect_attachment_filenames(frontmatter_data, content):
             ref = match.group(1) or match.group(2)
             if not ref:
                 continue
-            if re.search(r'\.(?:webp|jpg|jpeg|png|svg|webm|mp4|gif|pdf)$', ref, re.IGNORECASE):
-                filenames.add(ref)
+            filename = ref.split("|", 1)[0].strip() # Removes Obsidian image sizing, e.g. "|400" or "|400px"
+            if re.search(r'\.(?:webp|jpg|jpeg|png|svg|webm|mp4|gif|pdf)$', filename, re.IGNORECASE):
+                filenames.add(filename)
 
     def add_from_value(value):
         if isinstance(value, (list, tuple)):
@@ -161,7 +163,7 @@ def find_and_copy_attachments(filenames):
             print(f"⚠ File not found: {filename}")
             continue
     
-        extension = source_path.suffix.lower()
+        extension = found.suffix.lower()
 
         # --- Images ---
         if extension in [".jpg", ".jpeg", ".png", ".svg", ".webp"]:
@@ -209,13 +211,16 @@ def prepare_content(text: str) -> str:
     # Convert attachment links (ensure WebP/WebM)
     def replace_image(match):
         filename = Path(match.group(1))
+        size = match.group(2) or ""
+
         new_filename = f"{filename.stem}.webp"
-        return f"[[{new_filename}]]"
+
+        return f"![[{new_filename}{size}]]"
 
     def replace_video(match):
         filename = Path(match.group(1))
         new_filename = f"{filename.stem}.webm"
-        return f"[[{new_filename}]]"
+        return f"![[{new_filename}]]"
 
     text = re.sub(IMAGE_LINK_PATTERN, replace_image, text)
     text = re.sub(VIDEO_LINK_PATTERN, replace_video, text)
@@ -266,7 +271,7 @@ def prepare_frontmatter(post: frontmatter.Post, filepath: Path) -> frontmatter.P
 
             return "/" + (relative_attach_dir / new_name).as_posix()
 
-        updated = re.sub(IMAGE_LINK_PATTERN, replace_reference, raw_str)
+        updated = re.sub(FRONTMATTER_IMAGE_LINK_PATTERN, replace_reference, raw_str)
         updated = re.sub(VIDEO_LINK_PATTERN, replace_reference, updated)
         updated = re.sub(PDF_LINK_PATTERN, replace_reference, updated)
         return updated

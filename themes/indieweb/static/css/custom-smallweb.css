@@ -181,12 +181,12 @@ h1 {
   text-align: left;
   font-size: 1.8rem;
   line-height: 2rem;
-  margin-top: 0.8rem;
-  margin-bottom: 1.4rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
 }
 h2 {
-  margin-top: 0.8rem;
-  margin-bottom: 0.6rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
 }
 
 p {
@@ -317,6 +317,10 @@ pre code {
 }
 
 /* CUSTOM ELEMENTS -------------------------------------------------------------------------------------------------------------------- */
+
+.nowrap {
+  white-space: nowrap;
+}
 
 .refs-icon::after {
   content: "";
@@ -592,26 +596,6 @@ pre code {
     flex-direction: column;
   }
 
-  .home-image-row {
-    position: relative;
-    display: block;
-    height: 360px;
-    overflow: hidden;
-  }
-  .home-image-row img {
-    position: absolute;
-    top: 0;
-    display: block;
-    width: auto;
-    height: auto;
-    max-width: none;
-    opacity: 0;
-    transition: opacity 0s ease;
-  }
-  .home-image-row img.active {
-    opacity: 1;
-  }
-
   header {
     position: relative;
     flex-direction: row !important;
@@ -660,12 +644,31 @@ pre code {
   }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 600px) {
   body {
     font-size: 13px;
     line-height: 14px;
-    padding-left: 1rem;
-    padding-right: 1rem;
+    padding: 1rem;
+  }
+
+  .home-image-row {
+    position: relative;
+    display: block;
+    height: 360px;
+    overflow: hidden;
+  }
+  .home-image-row img {
+    position: absolute;
+    top: 0;
+    display: block;
+    width: auto;
+    height: auto;
+    max-width: none;
+    opacity: 0;
+    transition: opacity 0s ease;
+  }
+  .home-image-row img.active {
+    opacity: 1;
   }
 
   footer > div {

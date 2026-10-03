@@ -7,7 +7,7 @@ title: Semantic Web
 
 # Semantic Web
 
-Siehe: [[Informationstechnik]]
+Siehe: [[Informationstechnik & Infrastruktur]]
 
 Vision von Tim Berners-Lee (ca. 2001) – Beschreibt eine Erweiterung des [[Internet|Internets]], die es Computern ermöglicht, Informationen besser zu verstehen und zu verarbeiten, indem Daten mit **maschinenlesbaren Metadaten** angereichert werden, die ihre Bedeutung und Beziehungen beschreiben. Das ermöglicht eine effizientere Suche (siehe: [[Search Engines]]), [[Automatisierung|automatisierte]] Datenintegration und die Entwicklung intelligenterer Anwendungen im Web (siehe: [[Web Development]]).
 

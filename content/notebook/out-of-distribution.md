@@ -28,7 +28,7 @@ Um diese Probleme zu vermeiden, gibt es verschiedene Ansätze zur **Out-of-Distr
 		- Durch Anpassen des "Temperatur"-Parameters kann die confidence der Vorhersagen des Modells verändert werden. Korrekt kalibrierte Modelle können genauere Unsicherheitsschätzungen liefern, die bei der OOD-Erkennung helfen.
 - Training eines binären Klassifikationsmodells als Kalibrator:
 	- Ein weiterer Ansatz besteht darin, ein separates binäres Klassifikationsmodell zu trainieren, das als Kalibrator fungiert. Dieses Modell wird darauf trainiert, zwischen In-Distribution und OOD-Daten zu gunterscheiden. Indem die Ausgaben des primären Modells in diesen Kalibrator eingespeist werden, kann eine binäre Entscheidung darüber erhalten werden, ob die Instanz in Distribution oder OOD ist.
-	- Anstatt eines binären Klassifikators kann auch eine One-Class Support Vector Machine (SVM) eingesetzt werden, welche eine Outlier Boundary um die “normale” Klasse herum definiert: ![545](https://www.flair-tech.com/wp-content/uploads/2020/04/one_class_svm.png)
+	- Anstatt eines binären Klassifikators kann auch eine One-Class Support Vector Machine (SVM) eingesetzt werden, welche eine Outlier Boundary um die “normale” Klasse herum definiert: ![511](https://www.flair-tech.com/wp-content/uploads/2020/04/one_class_svm.png)
 - Monte-Carlo Dropout:
 	- [[Dropout]] ist eine Methode zur [[Regularisierung]], die häufig in neuronalen Netzwerken verwendet wird. Monte-Carlo Dropout beinhaltet das Durchführen von Dropout zur Inferenzzeit und das Ausführen des Modells mehrmals. Die Varianz in den Ausgaben des Modells über diese Durchläufe hinweg kann eine Schätzung der Unsicherheit des Modells liefern, die zur Erkennung von OOD-Instanzen verwendet werden kann.
 - …
