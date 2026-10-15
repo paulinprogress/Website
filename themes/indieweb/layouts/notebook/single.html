@@ -15,12 +15,14 @@
 
 <div class="grid-layout-centered">
 
-  <article class="single-narrow">
+  <article class="h-entry single-narrow">
 
     {{ partial "frontmatter.html" . }}
 
     {{ if .Content }}
+      <div class="e-content">
         {{ partial "content-parsed.html" . }}
+      </div>
     {{ end }}
 
   </article>
