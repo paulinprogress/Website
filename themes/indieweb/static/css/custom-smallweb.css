@@ -646,9 +646,19 @@ pre code {
 
 @media (max-width: 600px) {
   body {
-    font-size: 13px;
-    line-height: 14px;
+    font-size: 14px;
+    line-height: 16px;
     padding: 1rem;
+  }
+
+  h1 {
+    font-size: 1.6rem;
+    line-height: 1.8rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
+  h2 {
+    font-size: 1.2rem;
   }
 
   .home-image-row {
