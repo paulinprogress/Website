@@ -16,9 +16,13 @@
 <div class="grid-layout-biased">
 
   <article class="standalone-narrow">
+    
     {{ if .Content }}
+      <div class="e-content">
         {{ partial "content-parsed.html" . }}
+      </div>
     {{ end }}
+
   </article>
 
 </div>

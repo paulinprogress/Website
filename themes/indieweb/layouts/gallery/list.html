@@ -16,7 +16,7 @@
 <section class="standalone-wide">
 
     {{ if .Content }}
-        {{ partial "content-parsed.html" . }}
+      {{ partial "content-parsed.html" . }}
     {{ end }}
 
     {{ with .OutputFormats.Get "RSS" }}
@@ -25,7 +25,7 @@
 
     <hr>
 
-    <div class="gallery">
+    <div class="h-feed hfeed gallery">
 
       {{ range sort .Pages ".Params.captured" "desc" }}
 

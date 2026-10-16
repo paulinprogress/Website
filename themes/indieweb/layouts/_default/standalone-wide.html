@@ -14,9 +14,13 @@
 </header>
 
 <article class="standalone-wide">
+  
     {{ if .Content }}
+      <div class="e-content">
         {{ partial "content-parsed.html" . }}
+      </div>
     {{ end }}
+
 </article>
 
 {{ end }}

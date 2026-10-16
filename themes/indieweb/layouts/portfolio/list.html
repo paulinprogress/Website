@@ -18,10 +18,12 @@
 </header>
 
 <section class="portfolio">
-  
-  <div class="grid-layout-biased">
-    {{ partial "content-parsed.html" . }}
-  </div>
+
+  {{ if .Content }}
+    <div class="e-content grid-layout-biased">
+      {{ partial "content-parsed.html" . }}
+    </div>
+  {{ end }}
 
 </section>
 

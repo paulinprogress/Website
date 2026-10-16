@@ -16,7 +16,9 @@
   <article class="h-entry single-narrow">
     
     {{ if .Content }}
+      <div class="e-content">
         {{ partial "content-parsed.html" . }}
+      </div>
     {{ end }}
 
   </article>

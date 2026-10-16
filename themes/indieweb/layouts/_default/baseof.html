@@ -5,8 +5,10 @@
 
   <meta name="author" content="Paul Hofmann" />
   <title>
-    {{ if or (.IsHome) (.IsSection) }}
+    {{ if .IsHome }}
       {{ .Site.Title }}
+    {{ else if .IsSection }}
+      {{ title .Section }} - {{ .Site.Title }}
     {{ else }}
       {{ .Title }} - {{ .Site.Title }}
     {{ end }}
