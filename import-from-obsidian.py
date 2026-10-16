@@ -64,7 +64,7 @@ ALLOWED_KEYS = { "publish", "title", "description", "feature-image", "thumb-imag
 # Define media link patterns for handling attached media files
 IMAGE_LINK_PATTERN = re.compile(r'!\[\[([^|\]]+\.(?:webp|jpg|jpeg|png|svg))(\|[^\]]+)?\]\]', re.IGNORECASE)
 FRONTMATTER_IMAGE_LINK_PATTERN = re.compile(r'\[\[([^|\]]+\.(?:webp|jpg|jpeg|png|svg))\]\]', re.IGNORECASE)
-VIDEO_LINK_PATTERN = re.compile(r'\[\[(.+?\.(?:webm|mp4|gif))\]\]', re.IGNORECASE)
+VIDEO_LINK_PATTERN = re.compile(r'!?\[\[(.+?\.(?:webm|mp4|gif))\]\]', re.IGNORECASE)
 PDF_LINK_PATTERN = re.compile(r'\[\[(.+?\.(?:pdf))\]\]', re.IGNORECASE)
 
 
